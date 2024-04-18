@@ -1,0 +1,56 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.documentSelectors": ["**/*.svelte", "**/*.pug"],
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.formatOnPaste": false, // required
+	"editor.formatOnType": false, // required
+	"editor.formatOnSave": true, // optional
+	"editor.formatOnSaveMode": "file", // required to format on save
+	"files.autoSave": "onFocusChange",
+	"css.lint.unknownAtRules": "ignore", // ignore warning tailwind imports
+	"files.associations": {
+		// always open .css files in Tailwind CSS mode
+		"*.css": "tailwindcss"
+	},
+	// help vscode understand tailwind classes
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	// enable additional language support for tailwind
+	"tailwindCSS.includeLanguages": {
+		"plaintext": "html",
+		"pug": "html"
+	},
+	// enable emmet completions for tailwind
+	"tailwindCSS.emmetCompletions": true,
+	// enable linting
+	"tailwindCSS.validate": true,
+	"better-comments.highlightPlainText": true,
+	"tailwindCSS.files.exclude": [
+		"**/.git/**",
+		"**/node_modules/**",
+		"**/.hg/**",
+		"**/.svn/**",
+		"**/.vercel/**",
+		"**/.svelte-kit/**",
+		"**//output/**",
+		"**/static**"
+	]
+}

@@ -1,0 +1,27 @@
+version: "0.2"
+ignorePaths:
+  - /apps/web/src/lib/data/news.json
+  - /apps/web/src/lib/data/news_archive.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - package.json
+dictionaryDefinitions: []
+dictionaries: []
+enableCompoundWords: enable
+words:
+  - cloudinary
+  - deslugify
+  - hygraph
+  - Neue
+  - Noto
+  - OKLCH
+  - Roboto
+  - Segoe
+  - skinnypug
+  - stylesheet
+  - tailwindcss
+  - wordmark
+import: []
+ignoreWords:
+  - lorem
+  - ipsum

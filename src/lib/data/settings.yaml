@@ -1,0 +1,9 @@
+# settings data
+---
+siteAuthor: Verde Marketing
+siteDescription: marketing website for Verde Climate Solutions
+siteDomain: verdeclimatesolutions.com
+siteName: Verde Climate Solutions
+cloudinaryBaseUrl: https://res.cloudinary.com/dn0pqjjbq/image/upload/
+hygraphEndpointContent: ""
+hygraphEndpointHighSpeed: ""

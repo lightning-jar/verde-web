@@ -1,0 +1,32 @@
+---
+attribution-data:
+  label: website by ⚡️ Lightning Jar
+  url: "https://lightningjar.com"
+  rel: external
+  title: visit Lightning Jar website
+color-accent: "hsla(130, 90%, 34%, 1.0)"
+color-background: "hsla(246, 100%, 5%, 1.0)"
+color-primary: "#FFF"
+color-secondary: rgb(15 23 42)
+copyright-text: © 2024 Verde Climate Solutions LLC. All Rights Reserved.
+legal-links-data:
+  - label: Privacy
+    url: /legal/privacy
+link-lists-col-1-data:
+  - heading: Solutions
+    links:
+      - label: "Marketing Carbon Credits"
+        url: "/#marketing-carbon-credits"
+      - label: "Purchasing Carbon Credits"
+        url: "/#purchasing-carbon-credits"
+link-lists-col-2-data:
+  - heading: Resources
+    links:
+      - label: Blog
+        url: /blog
+      - label: Contact Us
+        url: /contact
+      - label: Glossary
+        url: /glossary
+      - label: News
+        url: /news

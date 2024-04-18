@@ -1,0 +1,51 @@
+{
+	plugins: ["@prettier/plugin-pug", "prettier-plugin-svelte"],
+	overrides: [
+		{
+			files: "*.svelte",
+			options: {
+				parser: "svelte",
+			},
+		},
+	],
+	arrowParens: "always",
+	bracketSpacing: true,
+	bracketSameLine: true, // changed from false to true
+	embeddedLanguageFormatting: "auto", // fails with "off"
+	htmlWhitespaceSensitivity: "strict",
+	printWidth: 80,
+	quoteProps: "consistent",
+	semi: true,
+	singleQuote: false,
+	singleAttributePerLine: true,
+	tabWidth: 2,
+	trailingComma: "all",
+	useTabs: true,
+	vueIndentScriptAndStyle: true, // added
+
+	// prettier pug plugin options
+	// https://prettier.github.io/plugin-pug/guide/pug-specific-options.html
+	// https://prettier.github.io/plugin-pug/guide/standard-prettier-overrides.html
+	pugArrowParens: "always",
+	pugAttributeSeparator: "always",
+	pugClassLocation: "before-attributes",
+	pugClassNotation: "as-is",
+	pugCommentPreserveSpaces: "keep-all",
+	pugEmptyAttributes: "as-is",
+	pugExplicitDiv: false,
+	pugFramework: "svelte",
+	pugIdNotation: "as-is",
+	pugPrintWidth: 80,
+	// pugSingleFileComponentIndentation: false,
+	pugSortAttributes: "asc",
+	pugSortAttributesBeginning: ["(class)"],
+	pugTabWidth: 2,
+	pugWrapAttributesPattern: "[a-zA-Z]+",
+	pugWrapAttributesThreshold: 0,
+
+	// prettier svelte plugin options
+	// https://github.com/sveltejs/prettier-plugin-svelte
+	svelteStrictMode: true,
+	svelteAllowShorthand: true,
+	svelteIndentScriptAndStyle: true, // added
+}

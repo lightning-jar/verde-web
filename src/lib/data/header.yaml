@@ -1,0 +1,25 @@
+# site header data
+---
+border-bottom-color: white
+border-bottom-size: .1em
+brand-image-alt: "verde logo"
+brand-image-url: /verde-logo.svg
+brand-link-title: "verde website home"
+button-link-label: Contact
+button-link-title: ""
+button-link-url: /contact
+color-accent: "transparent"
+color-background: transparent
+color-primary: white
+container-height: 90px
+menus-data:
+  - link:
+      label: Purchasing Credits
+      url: /#purchasing-carbon-credits
+  - link:
+      label: Marketing Credits
+      url: /#marketing-carbon-credit
+  - link:
+      label: ""
+      url: ""
+stylesheet: "#brand-image { width:110px; } #button-link { transition-property: color, background-color; transition-duration: 0.1s; } #button-link:hover { color:#09A423; border-color: #09A423; } .menu-heading-link:hover { color: #09A423; } @media(min-width:768px) { #main-nav { transform:translateY(.5em) }}"
