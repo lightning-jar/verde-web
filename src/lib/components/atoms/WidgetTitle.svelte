@@ -3,12 +3,26 @@
 Here's some documentation for this component.
 -->
 
-<script lang='ts'>
-  export let classes = ""
-
+<script lang="ts">
+	let { classes }: { classes: string } = $props();
 </script>
 
-<template lang='pug'>
-h2.font-medium.inline-block.text-28.text-center.mb-4(class="leading-tight sm:mb-4 sm:text-34 md:text-40 lg:text-left lg:text-36 xl:text-40 {classes}")
-	slot
-</template>
+<template lang="pug">
+	h2(
+		class=`
+			font-medium
+			inline-block
+			leading-tight
+			mb-4
+			text-28
+			text-center
+			sm:mb-4
+			sm:text-34
+			md:text-40
+			lg:text-36
+			lg:text-left
+			xl:text-40
+			{classes}`)
+		slot
+
+	|</template>

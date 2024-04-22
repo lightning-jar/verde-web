@@ -29,13 +29,12 @@ export const load: LayoutServerLoad = async function ({ url, locals }) {
 	const { siteDomain, siteName } = settings;
 
 	// unpack content
-	const { headerWC, home, footerWC } = content;
+	const { headerWC, footerWC } = content;
 
 	return {
 		dev,
 		// domain,
 		headerWC,
-		home,
 		footerWC,
 		version,
 		pathname,

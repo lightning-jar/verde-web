@@ -23,6 +23,7 @@ export const aliasList = {
 	$routes: "./src/routes",
 	$settings: "./src/lib/settings",
 	$stores: "./src/lib/stores",
+	$tools: "./src/lib/components/tools",
 	$types: "./src/lib/types",
 	$utils: "./src/lib/utils",
 	$wc: "./src/lib/components/wc",

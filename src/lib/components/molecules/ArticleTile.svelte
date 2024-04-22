@@ -3,57 +3,93 @@
 Here's some documentation for this component.
 -->
 
-<script lang='ts'>
+<script lang="ts">
+	// components
+	import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
+	import WidgetSubheading from "$atoms/WidgetSubheading.svelte";
+	import WidgetText from "$atoms/WidgetText.svelte";
 
-// components
-import WidgetSubheading from '$atoms/WidgetSubheading.svelte';
-import WidgetText from '$atoms/WidgetText.svelte';
-
-// props
-export let backgroundClasses = "";
-export let date: Date | null = null;
-export let source = ""
-
+	let {
+		backgroundClasses,
+		date,
+		excerpt,
+		headline,
+		image,
+		link,
+		linkClasses,
+		source,
+	} = $props();
 </script>
 
-<template lang='pug'>
-div.w-full.h-full.relative
-	//- inner
-	div.w-full.h-full.rounded-lg.overflow-hidden.grid.grid-cols-1.place-content-start(class!="pb-16 bg-white/5 {backgroundClasses}")
-
+<template lang="pug">
+	div(
+		class=`
+			{backgroundClasses}
+			bg-white/5
+			grid
+			grid-cols-1
+			h-full
+			overflow-hidden
+			pb-0
+			place-content-stretch
+			relative
+			rounded-lg
+			w-full`)
 		//-image
-		slot(name="image")
+		+if('image?.url')
+			img(
+				class=`
+					aspect-[4/3]
+					flex
+					w-full
+					object-cover
+					opacity-100
+					`,
+				alt!="",
+				draggable="false",
+				height!="",
+				loading="lazy",
+				src!="{ image.url ?? '/images/frog.webp' }",
+				width!="")
 
 		//- text content
-		.px-6.pt-6.pb-6
-
+		div(
+			class=`
+				grid
+				grid-cols-1
+				h-full
+				pt-6
+				px-6
+				place-content-start
+				place-self-start`)
 			//- date & source
-			.flex.mb-3.items-center
-				//- date
-				+if('date')
-					.opacity-70.tracking-wider.text-13 {date.toLocaleDateString()}
-				+if('date && source')
-					.mx-2.opacity-20 /
-				//- source
-				+if('source')
-					.text-14.opacity-70.font-medium.grow-0.w-full { source }
+			+if('date || source')
+				.flex.mb-3.items-center
+					//- date
+					+if('date')
+						.opacity-70.tracking-wider.text-13 { date.toLocaleDateString() }
+					+if('date && source')
+						.mx-2.opacity-20 /
+					//- source
+					+if('source')
+						.text-14.opacity-70.font-medium.grow-0.w-full { source }
 
 			//- headline
-			+if('$$slots.headline')
-				.grow-0
-					slot(name="headline")
+			+if('headline')
+				.mb-6 { headline }
 
 			//- excerpt
-			+if('$$slots.excerpt')
-				.opacity-80.pt-6.mt-6.leading-6.border-t(class="border-white/10")
-					p
-						slot(name="excerpt")
+			+if('excerpt')
+				.opacity-80.pt-6.mt-6.leading-6.border-t(
+					class="border-white/10")
+					p { excerpt }
 
 		//- link
-		+if('$$slots.link')
-			.absolute.grow-2.bottom-0.left-0.pb-8.pl-6
-				slot(name="link")
+		+if('link')
+			.h-full.flex-col.self-stretch.px-6.pb-4
+				PrimaryActionLink(
+					classes="z-10 max-w-fit px-6 {linkClasses}",
+					title!="{ link?.title ?? '' }",
+					url!="{ link?.url }") { link.label ?? "Read Story" }
 
-
-
-</template>
+		|</template>

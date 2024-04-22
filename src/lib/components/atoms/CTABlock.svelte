@@ -3,50 +3,113 @@
 Here's some documentation for this component.
 -->
 
-<script lang='ts'>
+<script lang="ts">
 	// components
-	import BrandLeaf from "$atoms/BrandLeaf.svelte"
-	export let primary_label = "Contact Us"
-	export let primary_href = "/contact"
-	export let secondary_label = "Keep Reading"
-	export let secondary_href = "/projects"
-	export let classes = ""
+	import BrandLeaf from "$atoms/BrandLeaf.svelte";
+
+	interface Props {
+		[key: string]: unknown;
+		bodyText: string;
+		classes: string;
+		headingText: string;
+		link: Link;
+		styles: string;
+	}
+	// props
+	let { bodyText, classes, headingText, link, styles }: Props = $props();
 </script>
 
-<template lang='pug'>
-.relative.mb-24.w-full.border.rounded-lg.py-8.px-4(
-	class="sm:flex sm:pr-2 sm:pl-6 border-neutral-100/60 lg:mb-0 lg:pl-8 lg:pr-4 xl:pr-6 xl:pl-10 {classes}")
+<template lang="pug">
+	div(
+		class=`
+		border
+		border-neutral-100/60
+		mb-24
+		px-4
+		py-8
+		relative
+		rounded-lg
+		w-full
+		sm:flex
+		sm:pl-6
+		sm:pr-2
+		lg:mb-0
+		lg:pl-8
+		lg:pr-4
+		xl:pl-10
+		xl:pr-6
+		{classes}`,
+		style!="{ styles ? styles : null }")
+		//- Graphic
+		BrandLeaf(
+			classes=`
+				w-20
+				sm:w-24
+				md:w-36
+				lg:w-20`,
+			containerClasses=`
+			flex
+			flex-none
+			justify-center
+			mb-6
+			w-full
+			sm:mb-0
+			sm:order-2
+			sm:w-auto`)
 
-	//- Graphic
-	.flex.justify-center.w-full.flex-none(class="mb-6 sm:mb-0 sm:w-auto sm:order-2")
-		.w-20(class="sm:w-24 md:w-36 lg:w-20")
-			BrandLeaf
+		//- CTA Content
+		div(
+			class=`
+				rounded-lg
+				text-center
+				text-neutral-100
+				w-full
+				sm:block
+				sm:text-left`)
+			//- heading
+			h3(
+				class=`
+					font-medium
+					max-w-xs
+					mb-2
+					text-18
+					text-slimy-300`) { headingText }
 
-	//- CTA Content
-	.rounded-lg.text-neutral-100.w-full.text-center(class="sm:block sm:text-left ")
-		//- heading
-		h3.mb-2.text-18.text-slimy-300.font-medium.max-w-xs
-			slot(name="heading")
+			//- text
+			p(
+				class=`
+					max-w-xs
+					mb-8
+					opacity-90
+					text-[0.9em]
+					lg:mb-6`) { bodyText }
 
-		//- text
-		p.mb-8.opacity-90(class="lg:mb-6 text-[0.9em] max-w-xs")
-			slot(name="text")
+			//- link
+			+if('link?.url')
+				a(
+					class=`
+						bg-slimy-300/90
+						border-0
+						border-1
+						border-penn-600
+						leading-none
+						mb-4
+						opacity-90
+						px-3
+						py-3
+						rounded
+						text-15
+						text-slimy-900
+						transition-opacity
+						whitespace-nowrap
+						hover:opacity-100
+						sm:inline-block
+						sm:mb-0
+						md:text-14`,
+					href!="{ link.url }",
+					rel!="{ link?.rel ? link.rel : null }",
+					target!="{ link?.target ? link?.target : null }",
+					title!="{ link?.title ? link.title : null }")
+					| { link?.label }
 
-		//- links
-		div(class="sm:flex sm:items-end")
-
-			//- primary link
-			a.mb-4.block.text-15.text-slimy-900.py-3.px-3.border-0.border-penn-600.border-1.rounded.leading-none.whitespace-nowrap(
-				class="sm:inline-block sm:mb-0 md:text-14 bg-slimy-300/90 opacity-90 hover:opacity-100 transition-opacity"
-				href!="{primary_href}"
-				title!="{primary_label}"
-				)
-				| {primary_label}
-
-			//- secondary link
-			//-a.text-center.block.mb-2.opacity-80.underline.underline-offset-4.tracking-wider(
-				title="go to {secondary_label}"
-				class="sm:text-left text-[.825em] sm:ml-4 hover:text-slimy-200 hover:opacity-100"
-				href!="{secondary_href}")
-					| {secondary_label}
-</template>
+	|</template>

@@ -82,7 +82,7 @@ Here's some documentation for this component.
 			+if('data.headerWC')
 				+html('data.headerWC.component')
 		//- main container
-		.flex
+		.w-full
 			slot
 		//- footer container
 		.align-self-end.w-full

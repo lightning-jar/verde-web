@@ -2,28 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-	[data-style="global-nav-item"] {
-		@apply /* layout */
-    block
-    whitespace-nowrap
-
-    /* opacity */
-    opacity-[.85]
-    hover:opacity-100
-    group-hover:opacity-100
-    group-focus-within:opacity-100
-
-    /* color */
-    text-white
-    hover:text-slimy-300
-    group-hover:text-slimy-300
-    group-focus-within:text-slimy-300
-
-    /* typography */
-    leading-none
-
-    /* outlines, borders, rings */
-    rounded-sm;
+@layer utilities {
+	.page-x-padding {
+		@apply px-3 md:px-6 lg:px-8 xl:px-12 2xl:px-16;
+	}
+	.main-y-padding {
+		@apply py-6 md:py-8 lg:py-10 xl:py-12 2xl:py-16;
 	}
 }

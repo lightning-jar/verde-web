@@ -3,40 +3,42 @@
 Here's some documentation for this component.
 -->
 
-<script lang='ts'>
-// components
-import ArticleTile from "$molecules/ArticleTile.svelte";
-import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
+<script lang="ts">
+	// components
+	import ArticleTile from "$molecules/ArticleTile.svelte";
 
-// types
-import type { Article, Articles } from "$types/generalTypes";
+	interface Props {
+		articles: Article[];
+		articleLimit: number;
+		tileBackgroundClasses: string;
+	}
 
-// props
-export let articles:Articles = []
-export let articleLimit	= 20;
-export let tileBackgroundClasses = "bg-slate-100"
+	let { articles, articleLimit, tileBackgroundClasses }: Props = $props();
 
-// variables
-let article: Article;
-let index: number;
-let classes: string;
+	let limitedArticles = articles.slice(0, articleLimit);
 
-// functions
-function show(index:number) {
-	return index < articleLimit;
-}
+	// variables
+	let article: Article;
+	let index: number;
+	let classes: string;
 </script>
 
-<template lang='pug'>
-		.grid.grid-cols-1.gap-8(class="sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4")
-			+each('articles as article, index')
-				+const('classes = index === 4 ? "hidden md:block xl:hidden 2xl:block" : "" ')
-				+if('show(index)')
-					.relative.w-full.h-full(class!="{classes}")
-						slot( name="article" article!="{article}" )
-
-
-
-
-
-</template>
+<template lang="pug">
+	div(
+		class=`
+			gap-8
+			grid
+			grid-cols-1
+			sm:grid-cols-2
+			lg:grid-cols-3
+			xl:grid-cols-4`)
+		+each('limitedArticles as article, index')
+			.relative.w-full.h-full(
+				class="lg:last:hidden xl:last:block")
+				ArticleTile(
+					backgroundClasses!="shadow bg-neutral-100/90",
+					headline!="{ article.headline }",
+					image!="{ article.image }",
+					link!="{ article.url }",
+					linkClasses!="border-penn hover:shadow hover:bg-penn hover:text-white")
+					|</template>

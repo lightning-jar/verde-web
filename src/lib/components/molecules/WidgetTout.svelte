@@ -7,48 +7,61 @@ Widget tout component to nest inside WidgetToutGrid
 props:
 -->
 
-<script lang='ts'>
-	// components
-	import Icon from "$atoms/Icon.svelte"
+<script lang="ts">
+	// prettier-disable
+	interface Props {
+		bodyClasses: string;
+		bodyText: string;
+		headingClasses: string;
+		headingTag: string;
+		headingText: string;
+		icon: Image;
+		cardClasses: string;
+		cardStyles: string;
+	}
 
 	// props
-	export let body:{ text: string; classes: string; } = {
-		text: "",
-		classes: "",
-	}
-	export let heading: { text: string; tag: string; classes: string; } = {
-		text: "",
-		tag: "h3",
-		classes:"",
-	}
-	export let icon: { name: string; classes: string } = {
-		name: "",
-		classes: "",
-	}
-	export let outer: {[key: string]: string} = {
-		classes: ""}
+	let {
+		bodyClasses,
+		bodyText = "",
+		headingClasses,
+		headingTag = "h3",
+		headingText = "",
+		icon,
+		cardClasses,
+		cardStyles,
+	}: Props = $props();
 
-
-const body_class = `opacity-[85%] text-[1em] leading-normal ${body.classes}`
-const heading_class = `mb-2 font-medium text-[1.065em] opacity-[95%] ${heading.classes}`
-const icon_class = `mb-4 w-16 h-16 text-current ${icon.classes}`
-const outer_class = `w-full h-full pl-8 pr-6 pt-6 pb-4 rounded-lg shadow-sm lg:mb-6 ${outer.classes}`
+	const body_classes = `opacity-[85%] text-[1em] leading-normal ${bodyClasses}`;
+	const heading_classes = `mb-2 font-medium text-[1.065em] opacity-[95%] ${headingClasses}`;
+	const card_classes = `w-full h-full pl-8 pr-6 pt-6 pb-4 rounded-lg shadow-sm lg:mb-6 ${cardClasses}`;
 </script>
 
-<template lang='pug'>
-div(class!="{outer_class}")
+<template lang="pug">
+	div(
+		class!="{ card_classes }",
+		style!="{ cardStyles ? cardStyles : null }")
+		//- image
+		img(
+			class=`
+				aspect-square
+				block
+				h-16
+				mb-4
+				w-16
+				`,
+			alt!="{ icon?.alt ?? '' }",
+			role="presentation",
+			src!="{ icon?.url ?? null }")
 
-	//- icon
-	div(class!="{icon_class}")
-		Icon(icon!="{icon.name}")
+		//- heading
+		+if('headingText')
+			svelte:element(
+				class!="{ heading_classes }",
+				this!="{ headingTag }") { headingText }
 
-	//- heading
-	+if('heading.tag')
-		svelte:element(
-			class!="{heading_class}"
-			this!="{heading.tag}") { heading.text }
+		//- text
+		p(
+			class!="{ body_classes }") { bodyText }
 
-	//- text
-	p(class!="{body_class}") {body.text}
-
-</template>
+		|</template>
