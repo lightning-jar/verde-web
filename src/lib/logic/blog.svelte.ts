@@ -32,7 +32,7 @@ export function createBlog() {
 			return {
 				headline,
 				image,
-				url: slug,
+				slug: slug,
 			};
 		});
 		return articles;

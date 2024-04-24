@@ -11,6 +11,8 @@ Here's some documentation for this component.
 	import Values from "$molecules/Values.svelte";
 
 	let { data } = $props();
+
+	$inspect(data.latestBlog);
 </script>
 
 <template lang="pug">

@@ -58,11 +58,12 @@ Here's some documentation for this component.
 				class="sm:grid-cols-1 md:grid-cols-2")
 				+each('latestNews as article, index')
 					+if('index == 1 || index == 0')
+						+const('linkUrl = "news/" + article?.url')
 						.relative.w-full.h-full
 							ArticleTile(
 								headline!="{ article?.headline }",
 								image!="{ article?.image }",
-								link!="{ {url: article?.url, label: 'Read Story' }}",
+								link!="{ {url: linkUrl, label: 'Read Story' }}",
 								linkClasses!="hover:bg-penn hover:shadow")
 
 			//- Other Resources

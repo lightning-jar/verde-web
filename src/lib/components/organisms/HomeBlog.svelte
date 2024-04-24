@@ -46,6 +46,7 @@ Here's some documentation for this component.
 			//- gallery
 			.w-full.mb-6
 				ArticleGallery(
+					articleFolder="blog/",
 					articleLimit!="{ 4 }",
 					articles!="{ articles }",
 					headlineClasses="mb-6",
