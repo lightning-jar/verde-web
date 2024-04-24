@@ -9,14 +9,26 @@ Here's some documentation for this component.
 	import WidgetSubheading from "$atoms/WidgetSubheading.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
 
+	interface Props {
+		backgroundClasses: string;
+		headlineClasses: string;
+		date: string;
+		excerpt: string;
+		headline: string;
+		image: Image;
+		link: Link;
+		linkClasses: string;
+		source: string;
+	}
 	let {
-		backgroundClasses,
-		date,
-		excerpt,
-		headline,
-		image,
-		link,
-		linkClasses,
+		backgroundClasses = "",
+		headlineClasses = "",
+		date = "",
+		excerpt = "",
+		headline = "",
+		image = {},
+		link = {},
+		linkClasses = "",
 		source,
 	} = $props();
 </script>
@@ -24,7 +36,6 @@ Here's some documentation for this component.
 <template lang="pug">
 	div(
 		class=`
-			{backgroundClasses}
 			bg-white/5
 			grid
 			grid-cols-1
@@ -34,7 +45,8 @@ Here's some documentation for this component.
 			place-content-stretch
 			relative
 			rounded-lg
-			w-full`)
+			w-full
+			{backgroundClasses}`)
 		//-image
 		+if('image?.url')
 			img(
@@ -76,20 +88,24 @@ Here's some documentation for this component.
 
 			//- headline
 			+if('headline')
-				.mb-6 { headline }
+				div(
+					class!="{ headlineClasses }") { headline }
 
 			//- excerpt
 			+if('excerpt')
-				.opacity-80.pt-6.mt-6.leading-6.border-t(
+				.opacity-80.pt-6.mt-6.mb-8.leading-6.border-t(
 					class="border-white/10")
 					p { excerpt }
 
 		//- link
-		+if('link')
+		+if('link && link.url')
 			.h-full.flex-col.self-stretch.px-6.pb-4
 				PrimaryActionLink(
 					classes="z-10 max-w-fit px-6 {linkClasses}",
-					title!="{ link?.title ?? '' }",
-					url!="{ link?.url }") { link.label ?? "Read Story" }
+					label!="{ link?.label ?? 'Read Story' }",
+					rel!="{ link?.rel }",
+					target!="{ link?.target }",
+					title!="{ link?.title }",
+					url!="{ link?.url }")
 
 		|</template>

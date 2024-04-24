@@ -8,8 +8,30 @@ Here's some documentation for this component.
 </script>
 
 <template lang="pug">
-	.group.h-full.w-full.px-4.py-3.rounded-lg.pointer-events-auto.relative(
-		class="border border-1 border-penn-100 p-6 bg-penn/30 hover:bg-penn-400/30 hover:border-penn-600/30 lg:px-6 lg:py-6 xl:col-span-2 { card.classes }")
+	div(
+		class=`
+			backdrop-blur
+			bg-penn/30
+			border
+			border-1
+			border-penn-100
+			group
+			h-full
+			p-6
+			pointer-events-auto
+			px-4
+			py-3
+			relative
+			rounded-lg
+			w-full
+			hover:bg-penn-400/30
+			hover:border-penn-600/30
+			lg:backdrop-blur-none
+			lg:bg-penn/0
+			lg:px-6
+			lg:py-6
+			xl:col-span-2
+			{card.classes}`)
 		//- category tag ( hidden on mobile)
 		div(
 			class=`

@@ -22,14 +22,14 @@ Here's some documentation for this component.
 		class=`
 			h-screen
 			flex
-			max-h-[915px]
-			min-h-[667px]
+			max-h-[667px]
+			h-[590px]
 			overflow-hidden
 			relative
 			text-white
 			w-full
 			sm:h-screen
-			sm:max-h-[860px]
+			sm:max-h-[800px]
 			md:max-h-[900px]
 			lg:h-[90vh]
 			lg:max-h-[860px]
@@ -82,7 +82,7 @@ Here's some documentation for this component.
 					width="auto")
 
 		//- video overlay
-		#billboard-video-overlay0(
+		#billboard-video-overlay(
 			class=`
 				absolute
 				bg-gradient-to-b
@@ -104,7 +104,6 @@ Here's some documentation for this component.
 					mt-2
 					place-content-start
 					pointer-events-none
-					page-x-padding
 					w-full
 					z-20`)
 			#billboard-heading-container-inner(
@@ -116,6 +115,7 @@ Here's some documentation for this component.
 					flex
 					flex-col
 					mt-2
+					page-x-padding
 					z-20
 					lg:max-w-lg
 					lg:pb-4
@@ -126,9 +126,11 @@ Here's some documentation for this component.
 							font-medium
 							leading-tight
 							mb-3
+							px-6
 							text-32
 							w-full
 							sm:text-36
+							lg:px-0
 							lg:mb-6
 							xl:text-[2.8vw]`) { data?.headline ?? "" }
 				//- text
@@ -138,30 +140,33 @@ Here's some documentation for this component.
 						text-16
 						leading-relaxed
 						opacity-90
+						px-6
 						sm:block
 						sm:text-18
 						sm:pr-12
+						lg:px-0
 						lg:text-16`) { data?.text ?? "" }
 
 		//- cards
 		div(
 			class=`
 				absolute
+				bottom-16
 				gap-y-4
 				grid
 				grid-cols-1
 				inset-0
-				mb-8
-				pb-16
 				place-content-end
 				place-items-center
 				px-4
 				pointer-events-none
 				sm:absolute
+				sm:bottom-20
 				sm:gap-6
 				sm:px-8
 				md:grid-cols-2
 				md:mb-16
+				lg:bottom-0
 				lg:gap-10
 				lg:mb-0
 				lg:pb-24

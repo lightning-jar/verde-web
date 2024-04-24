@@ -39,15 +39,17 @@ Here's some documentation for this component.
 				place-items-center
 				text-center
 				mb-12
-				lg:place-items-start lg:text-left xl:grid-cols-2`)
+				sm:place-items-start
+				sm:text-left
+				md:grid-cols-2`)
 			BrandLeaf(
-				containerClasses!="w-20 xl:order-2 place-self-end")
+				containerClasses!="w-20 md:order-2 md:self-start md:justify-self-end")
 			div(
 				class="xl:order-1")
 				WidgetTitle(
-					classes!="lg:text-left") { resources.title }
+					classes!="sm:text-left") { resources.title }
 				WidgetText(
-					classes="px-8 lg:px-0 lg:max-w-md lg:text-left") { resources.subtitle }
+					classes="px-8 sm:text-left sm:px-0 sm:max-w-md ") { resources.subtitle }
 
 		//- Articles Widget
 		.grid.grid-cols-1.gap-8(

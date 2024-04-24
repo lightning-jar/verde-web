@@ -15,7 +15,7 @@ Here's some documentation for this component.
 	import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
 
 	// props
-	let { backgroundClasses, blog, latestBlogArticles } = $props();
+	let { articles, backgroundClasses, blog } = $props();
 </script>
 
 <template lang="pug">
@@ -33,9 +33,9 @@ Here's some documentation for this component.
 						class="group",
 						href="/blog")
 						WidgetTitle(
-							classes="sm:text-left group-hover:underline underline-offset-8") Blog
+							classes="sm:text-left group-hover:underline underline-offset-8") { blog.title }
 					WidgetText(
-						classes="sm:text-left") Thoughts and insights about carbon offset projects, carbon credits, and carbon reduction from the experts at Verde.
+						classes="sm:text-left") { blog.subtitle }
 				.flex.w-full.order-1.mb-4.justify-center(
 					class="md:order-2 md:mb-0 sm:justify-start md:justify-end")
 					a.w-20(
@@ -47,42 +47,11 @@ Here's some documentation for this component.
 			.w-full.mb-6
 				ArticleGallery(
 					articleLimit!="{ 4 }",
-					articles!="{ latestBlogArticles }")
-					//- Image
-					//- svelte:fragment(
-					//- 	slot="image")
-					//- 	.w-full.aspect-video.relative(
-					//- 		class="bg-slate-300")
-					//- 		picture.flex.w-100.aspect-video
-					//- 			img.opacity-100.object-cover.min-h-full.min-w-full(
-					//- 				alt!="{ article.image.alt }",
-					//- 				draggable="false",
-					//- 				height!="{ null }",
-					//- 				loading="lazy",
-					//- 				src!="{ article.image.src || '/images/frog.webp' }",
-					//- 				width!="{ null }")
-					//- Source
-					//- svelte:fragment(slot="source")
-					//- 	.text-15 {article.source}
+					articles!="{ articles }",
+					headlineClasses="mb-6",
+					linkClasses="border-penn hover:shadow hover:bg-penn hover:text-white",
+					tileBackgroundClasses="shadow bg-neutral-100/90")
 
-					//- //- Headline
-					//- svelte:fragment(
-					//- 	slot="headline")
-					//- 	div
-					//- 		WidgetSubheading(
-					//- 			classes="!mb-0",
-					//- 			tag!="h2") { article.headline }
-
-					//- //- Excerpt
-					//- svelte:fragment(slot="excerpt")
-					//- 	.text-15.text-neutral-100 {article.excerpt}
-
-					//- Link
-					//- svelte:fragment(
-					//- 	slot="link")
-					//- 	PrimaryActionLink(
-					//- 		classes!="border-penn bg-transparent hover:border-transparent hover:bg-slimy-400 hover:text-white hover:shadow transition-color",
-					//- 		href!="/blog/{article.slug}") Read article
 			//- Footer
 			div
 				a.text-15(

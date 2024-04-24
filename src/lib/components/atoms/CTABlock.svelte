@@ -43,10 +43,10 @@ Here's some documentation for this component.
 		//- Graphic
 		BrandLeaf(
 			classes=`
-				w-20
-				sm:w-24
-				md:w-36
-				lg:w-20`,
+				!w-20
+				!sm:w-24
+				!md:w-36
+				!lg:w-20`,
 			containerClasses=`
 			flex
 			flex-none

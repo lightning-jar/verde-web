@@ -9,11 +9,21 @@ Here's some documentation for this component.
 
 	interface Props {
 		articles: Article[];
+		articleFolder?: string;
 		articleLimit: number;
+		headlineClasses: string;
+		linkClasses: string;
 		tileBackgroundClasses: string;
 	}
 
-	let { articles, articleLimit, tileBackgroundClasses }: Props = $props();
+	let {
+		articles,
+		articleFolder = "",
+		articleLimit = 20,
+		headlineClasses = "",
+		linkClasses = "",
+		tileBackgroundClasses,
+	}: Props = $props();
 
 	let limitedArticles = articles.slice(0, articleLimit);
 
@@ -33,12 +43,14 @@ Here's some documentation for this component.
 			lg:grid-cols-3
 			xl:grid-cols-4`)
 		+each('limitedArticles as article, index')
-			.relative.w-full.h-full(
-				class="lg:last:hidden xl:last:block")
+			+const('articleUrl = articleFolder + article?.slug')
+			.relative.w-full.h-full
 				ArticleTile(
-					backgroundClasses!="shadow bg-neutral-100/90",
+					backgroundClasses!="{ tileBackgroundClasses }",
+					excerpt!="{ article?.excerpt ?? '' }",
 					headline!="{ article.headline }",
+					headlineClasses!="{ headlineClasses }",
 					image!="{ article.image }",
-					link!="{ article.url }",
-					linkClasses!="border-penn hover:shadow hover:bg-penn hover:text-white")
+					link!="{{url: articleUrl} }",
+					linkClasses!="{ linkClasses }")
 					|</template>

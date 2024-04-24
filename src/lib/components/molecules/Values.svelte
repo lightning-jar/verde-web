@@ -139,24 +139,27 @@ Here's some documentation for this component.
 				lg:place-items-start`)
 			//- Title
 			WidgetTitle(
-				classes!="mb-4 w-full lg:!mb-0") { values.title }
+				classes!="!mb-8 w-full px-24 lg:px-0 lg:!mb-0") { values.title }
 
 			//- CallOut
 			div(
 				class=`
-					bg-penn/20
+					bg-penn/60
 					border
 					border-neutral-100
 					flex
 					h-auto
 					items-center
+					//mx-12
 					mix-blend-darken
 					px-4
 					py-4
 					rounded-md
 					text-neutral-200
+					lg:bg-penn/20
 					lg:col-span-2
 					lg:h-full
+					lg:mx-0
 					lg:px-6
 					lg:py-8
 					xl:py-2
@@ -166,6 +169,9 @@ Here's some documentation for this component.
 			class=`
 				page-x-padding
 				relative
+				grid
+				grid-cols-1
+				place-items-center
 				md:gap-6
 				md:grid
 				md:grid-cols-2
@@ -181,6 +187,7 @@ Here's some documentation for this component.
 						grid
 						grid-cols-1
 						items-start
+						max-w-md
 						mb-8
 						p-4
 						place-content-start
@@ -195,6 +202,7 @@ Here's some documentation for this component.
 						lg:backdrop-blur-none
 						lg:bg-transparent
 						lg:items-end
+						lg:max-w-none
 						lg:place-content-end
 						lg:min-h-[460px]
 						lg:p-0`)
@@ -203,6 +211,7 @@ Here's some documentation for this component.
 						class=`
 							backdrop-blur
 							bg-penn-200/40
+
 							font-medium
 							leading-none
 							mb-4
@@ -211,6 +220,7 @@ Here's some documentation for this component.
 							text-[1.065em]
 							text-center
 							tracking-wider
+							lg:bg-penn-200/40
 							lg:mb-0
 							lg:order-2
 							lg:shadow-none`) { block.headingText }

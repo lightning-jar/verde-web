@@ -2,13 +2,17 @@
 import YAML from "yaml";
 
 // import raw data
-import { default as newsDataRaw } from "$data/news.yaml?raw";
+import { default as newsArticlesDataRawYAML } from "$data/news.yaml?raw";
+import { default as newsPageDataRawYAML } from "$data/newsPage.yaml?raw";
 
 // parse raw data
-const newsData = YAML.parse(newsDataRaw);
+const newsArticlesData: Article[] = YAML.parse(newsArticlesDataRawYAML);
+const newsPageData = YAML.parse(newsPageDataRawYAML);
 
 export function createNews() {
-	let data = $state(newsData);
+	let data = $state(newsArticlesData);
+
+	let page = $state(newsPageData);
 
 	let footerNews = $derived.by(() => {
 		const latest = data.slice(0, 3);
@@ -16,7 +20,7 @@ export function createNews() {
 		const links: Link[] = latest.map((news: Link) => {
 			return {
 				label: news.headline,
-				url: news.slug,
+				url: `news/${news.slug}`,
 			} as Link;
 		});
 
@@ -38,7 +42,7 @@ export function createNews() {
 	});
 
 	return {
-		get data() {
+		get articles() {
 			return data;
 		},
 		get footerNews() {
@@ -46,6 +50,9 @@ export function createNews() {
 		},
 		get latestNews() {
 			return latestNews;
+		},
+		get page() {
+			return page;
 		},
 	};
 }

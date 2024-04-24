@@ -1,0 +1,12 @@
+header:
+  headline: News
+  text: >-
+    Recent news from around the industry on carbon credits, carbon reduction and related topics.
+
+meta:
+  title: Verde | News
+  shortTitle: News
+  description: >-
+    Recent news from around the industry on carbon credits, carbon reduction and related topics.
+  robotsFollow: true
+  plausibleAnalytics: true

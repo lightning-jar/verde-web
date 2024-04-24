@@ -34,10 +34,10 @@ Here's some documentation for this component.
 			latestNews!="{ data.latestNews }",
 			resources!="{ data.resources }")
 
-	+if('data.blog && data.latestBlogArticles')
+	+if('data.blog && data.latestBlog')
 		Blog(
+			articles!="{ data.latestBlog }",
 			backgroundClasses!="bg-slate-200",
-			blog!="{ data.blog }",
-			latestBlogArticles!="{ data.latestBlogArticles }")
+			blog!="{ data.blog }")
 
 	|</template>

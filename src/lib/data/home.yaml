@@ -13,8 +13,8 @@ billboard:
         label: Learn More
         url: "/#purchasing-carbon-credits"
       mobile:
-        heading: "Get high quality credits & other offsets that meet your carbon-reduction goals"
-        text: ""
+        heading: ""
+        text: "Get high quality credits & other offsets that meet your carbon-reduction goals"
         linkLabel: "Find Carbon Credits"
     - category: "Project Developers"
       heading: Get Started

@@ -5,7 +5,6 @@ Here's some documentation for this component.
 
 <script lang="ts">
 	// components
-	import BrandLeaf from "$atoms/BrandLeaf.svelte";
 	import CTABlock from "$atoms/CTABlock.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import WidgetTitle from "$atoms/WidgetTitle.svelte";
@@ -26,7 +25,7 @@ Here's some documentation for this component.
 			max-w-screen
 			overflow-hidden
 			page-x-padding
-			py-16 relative
+			py-16
 			relative
 			text-neutral-100
 			to-penn-725
@@ -71,7 +70,6 @@ Here's some documentation for this component.
 					place-items-center
 					text-center
 					w-full
-					sm:max-w-sm
 					lg:place-items-start
 					lg:text-left`)
 				WidgetTitle { solution?.title ? solution.title : "" }

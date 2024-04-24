@@ -5,13 +5,13 @@ export const load: PageServerLoad = async function ({ locals }) {
 
 	// get home content
 	const { billboard, blog, meta, resources, solutions, values } = content.home;
-	const { latestNews } = content;
-	const { latestBlogArticles } = content;
+	const { latestNews } = content.news;
+	const { latestBlog } = content.blog;
 
 	return {
 		billboard,
 		blog,
-		latestBlogArticles,
+		latestBlog,
 		latestNews,
 		meta,
 		resources,

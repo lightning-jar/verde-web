@@ -14,16 +14,19 @@ interface BlogArticle {
 }
 
 // import raw data
-import { default as blogDataRaw } from "$data/blog.yaml?raw";
+import { default as blogArticlesDataRawYAML } from "$data/blog.yaml?raw";
+import { default as blogPageDataRawYAML } from "$data/blogPage.yaml?raw";
 
 // parse raw data
-const dataRaw = YAML.parse(blogDataRaw);
+const blogArticlesDataRaw = YAML.parse(blogArticlesDataRawYAML);
+const blogPageDataRaw = YAML.parse(blogPageDataRawYAML);
 
 export function createBlog() {
-	let data = $state(dataRaw as BlogArticle[]);
+	let articlesData = $state(blogArticlesDataRaw as BlogArticle[]);
+	let pageData = $state(blogPageDataRaw);
 
 	let latestBlogArticles = $derived.by(() => {
-		const latest = data.slice(0, 20);
+		const latest = articlesData.slice(0, 20);
 		const articles = latest.map((article) => {
 			const { headline, image, slug } = article;
 			return {
@@ -36,10 +39,13 @@ export function createBlog() {
 	});
 
 	return {
-		get data() {
-			return data;
+		get articles() {
+			return articlesData;
 		},
-		get latestBlogArticles() {
+		get page() {
+			return pageData;
+		},
+		get latest() {
 			return latestBlogArticles;
 		},
 	};

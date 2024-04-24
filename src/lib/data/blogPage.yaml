@@ -1,0 +1,12 @@
+header:
+  headline: Blog
+  text: >-
+    Articles and insights about carbon credits and related topics from the experts at Verde.
+
+meta:
+  title: Verde | Blog
+  shortTitle: Blog
+  description: >-
+    Articles & insights about carbon credits + related topics.
+  robotsFollow: true
+  plausibleAnalytics: true
