@@ -17,28 +17,28 @@
 		%sveltekit.head%
 
 		<!-- zoomInfo tracking script -->
-		<!-- <script id="zoominfo-tracker" async>
+		<script
+			id="zoominfo-tracker"
+			async>
+			// project key
+			const key = "399e3ae76d1705076706";
+			window["ZIProjectKey"] = key;
 
-		// project key
-		const key = "399e3ae76d1705076706";
-		window["ZIProjectKey"] = key;
+			// tracking script element
+			const zi = document.createElement("script");
+			zi.type = "text/javascript";
+			zi.async = true;
+			zi.src = "https://js.zi-scripts.com/zi-tag.js";
 
-		// tracking script element
-		const zi = document.createElement("script");
-		zi.type = "text/javascript";
-		zi.async = true;
-		zi.src = "https://js.zi-scripts.com/zi-tag.js";
-
-
-		// append to body
-		if (document.readyState === 'complete') {
-        document.body.appendChild(zi);
-    } else {
-        window.addEventListener('load', function () {
-            document.body.appendChild(zi);
-        });
-    }
-	</script> -->
+			// append to body
+			if (document.readyState === "complete") {
+				document.body.appendChild(zi);
+			} else {
+				window.addEventListener("load", function () {
+					document.body.appendChild(zi);
+				});
+			}
+		</script>
 	</head>
 	<body
 		class="bg-penn text-slate-50 min-h-screen flex justify-center w-screen max-w-screen overflow-x-hidden select-none">
