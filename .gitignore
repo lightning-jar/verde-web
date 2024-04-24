@@ -26,10 +26,10 @@ turb-build.log
 node_modules/
 
 # lock files
-bun.lockb
+# bun.lockb
 yarn.lock
 package-lock.json
-# pnpm-lock.yaml
+pnpm-lock.yaml
 
 # mac
 ._*
