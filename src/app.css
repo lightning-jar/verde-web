@@ -10,3 +10,19 @@
 		@apply py-6 md:py-8 lg:py-10 xl:py-12 2xl:py-16;
 	}
 }
+
+@layer components {
+	#article-text P {
+		opacity: 0.9;
+	}
+	#article-text p {
+		margin-bottom: 1rem;
+	}
+	#article-text h2 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		padding-top: 1rem;
+		opacity: 0.95;
+	}
+}

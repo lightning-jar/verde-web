@@ -29,24 +29,16 @@ Here's some documentation for this component.
 
 				//- body
 				.w-full.pb-12.max-w-2xl
-					h1.text-19.font-semibold.mb-4(
-						class="lg:text-24") { data.article?.headline }
+					h1.text-19.font-semibold.mb-4.capitalize(
+						class="capitalize lg:text-24") { data.article?.headline }
 					+if('data.article?.excerpt')
 						p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
 
 					+if('data.article?.text')
-						#text.text-18.leading-relaxed(
+						#article-text.text-18.leading-relaxed(
 							class="md:text-[18px]")
 							| {  @html data.article?.text?.html  }
 	|</template>
 
 <style lang="postcss">
-	:global(#text p) {
-		margin-bottom: 1rem;
-	}
-	:global(#text h2) {
-		font-size: 1.25rem;
-		font-weight: 600;
-		margin-bottom: 1rem;
-	}
 </style>

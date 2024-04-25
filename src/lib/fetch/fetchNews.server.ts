@@ -13,7 +13,7 @@ export async function updateNews(building: boolean) {
 	// if we are not building, return the backup data
 	if (!building) {
 		console.log("not building, using backup data for news");
-		// return newsStore;
+		return;
 	}
 
 	// get data from hygraph
@@ -21,9 +21,8 @@ export async function updateNews(building: boolean) {
 		const newsArticlesData: { articles: Article[] } =
 			await hygraphHighSpeed.request(allNews);
 		const news = newsArticlesData.articles;
-		console.log("fetched", news);
 		// update the data store
-		// newsStoreRaw.set(news);
+		newsContent.articles = news;
 		// // log success
 		console.log("news data updated");
 		// return newsStore;

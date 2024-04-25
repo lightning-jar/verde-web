@@ -36,7 +36,7 @@
 					+if('f && text && text.includes(f) || !f')
 						.mt-8.pt-8(
 							class="{(index == data.entries.length - 1) ? '' : 'border-t'} border-neutral-100/30",
-							id!="{ slugify(entry.term) }")
+							id!="{ slugify(entry.term).replace(/\-$/,'') }")
 							div(
 								class="md:max-w-lg")
 								h3.mb-1.text-17(

@@ -22,8 +22,7 @@
 - headline: Alaska House follows Senate in passing bill authorizing sale of carbon credits from state land
   date: "2023-05-17T00:00:00.000Z"
   excerpt: >-
-    The Alaska House of Representatives on Tuesday passed a bill that would allow the state to set up a system for using state land to sell
-    carbon-offset credits. The House action amounted to final passage of the bill, which was approved the previous day by the state Senate.
+    The Alaska House of Representatives on Tuesday passed a bill that would allow the state to set up a system for using state land to sell carbon-offset credits. The House action amounted to final passage of the bill, which was approved the previous day by the state Senate.
   id: 20ygn3OtqCSH42EYsTqH-
   image:
     url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_auto/v1685126313/mt-shasta_qbwnuw.avif
@@ -37,7 +36,7 @@
   sourceArticleUrl: https://www.adn.com/politics/alaska-legislature/2023/05/17/alaska-house-follows-senate-to-pass-bill-authorizing-sale-of-carbon-credits-from-state-land/
   tags: []
   type: news
-- headline: Key Insights from World Bank\’s 2023 Carbon Pricing Report
+- headline: Key Insights from World Bank’s 2023 Carbon Pricing Report
   date: "2023-05-26T00:00:00.000Z"
   excerpt: >-
     Amid the global energy crisis and economic issues, revenues from carbon credits traded in emissions trading systems (ETS) and carbon taxes hit record high in 2022 reaching almost $100 billion, per the World Bank carbon pricing report."
@@ -50,7 +49,7 @@
   slug: key-insights-from-world-banks-2023-carbon-pricing-report
   source:
     name: CarbonCredits.com
-    url: https://carboncredits.com/6-key-takeaways-from-world-bank-2023-carbon-pricing-report
-  sourceArticleUrl: ""
+    url: https://carboncredits.com
+  sourceArticleUrl: "https://carboncredits.com/6-key-takeaways-from-world-bank-2023-carbon-pricing-report"
   tags: []
   type: news

@@ -65,28 +65,32 @@ Here's some documentation for this component.
 					content="noindex, nofollow",
 					name="robots")
 
-	div(
-		class=`
-			grid
-			grid-cols-1
-			justify-start
-			min-h-screen
-			place-items-start
-			place-content-start
-			grid-rows-[auto,1fr,auto]
-			mx-auto
-			text-white
-			w-full`)
-		//- header
-		.w-full
-			+if('data.headerWC')
-				+html('data.headerWC.component')
-		//- main container
-		.w-full
-			slot
-		//- footer container
-		.align-self-end.w-full
-			+if('data.footerWC')
-				+html('data.footerWC.component')
+		//- zoom info tracker
+		+if('!data.dev')
+			script(
+				async,
+				id="zoominfo-tracker",
+				src="/zoomInfo.js")
+	|</template>
 
-		|</template>
+<div
+	class="grid grid-cols-1 justify-start min-h-screen place-items-start place-content-start grid-rows-[auto,1fr,auto] mx-auto text-white w-full">
+	<!-- header -->
+	<div class="w-full">
+		{#if data.headerWC}
+			{@html data.headerWC.component}
+		{/if}
+	</div>
+
+	<!--main container -->
+	<div class="w-full">
+		<slot></slot>
+	</div>
+
+	<!---footer container -->
+	<div class="align-self-end w-full">
+		{#if data.footerWC}
+			{@html data.footerWC.component}
+		{/if}
+	</div>
+</div>

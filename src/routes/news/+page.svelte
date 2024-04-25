@@ -28,7 +28,7 @@ Here's some documentation for this component.
 		ArticleGallery(
 			articleFolder="news/",
 			articles!="{ data.articles }",
-			headlineClasses="font-semibold text-lg",
+			headlineClasses="capitalize font-semibold text-lg",
 			linkClasses="hover:bg-penn-750 hover:shadow-lg",
 			tileBackgroundClasses="shadow-md bg-penn-700")
 	|</template>

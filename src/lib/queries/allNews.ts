@@ -1,6 +1,6 @@
 export const allNews = `
-	query newsArticles(where: {type: news}) {
-		articles {
+	query newsArticles {
+		articles(where: {type: news}) {
       author
       date
       excerpt
@@ -26,6 +26,7 @@ export const allNews = `
       text {
         html
       }
+      type
     }
 	}
 `;

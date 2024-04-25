@@ -44,9 +44,13 @@ export function createNews() {
 		get articles() {
 			return data;
 		},
-		// set articles(value: Article[]) {
-		// 	data = value;
-		// },
+		set articles(value: Article[]) {
+			if (!value) return;
+			console.log("setting articles");
+			data = value;
+			console.log(data);
+			return;
+		},
 		get footerNews() {
 			return footerNews;
 		},

@@ -1,4 +1,5 @@
 import type { PageServerLoad } from "./$types";
+import { newsContent } from "$logic/news.svelte";
 
 export const load: PageServerLoad = async function ({ locals }) {
 	interface Page {
@@ -10,8 +11,7 @@ export const load: PageServerLoad = async function ({ locals }) {
 	}
 
 	// get content
-	const { content } = locals;
-	const { articles, page }: { articles: Article[]; page: Page } = content.news;
+	const { articles, page }: { articles: Article[]; page: Page } = newsContent;
 
 	return {
 		articles,
