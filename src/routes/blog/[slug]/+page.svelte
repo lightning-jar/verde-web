@@ -5,34 +5,12 @@ Here's some documentation for this component.
 <script lang="ts">
 	// components
 	import PageContainer from "$molecules/PageContainer.svelte";
-	import PageHeader from "$atoms/PageHeader.svelte";
 
 	// types
 	import type { PageData } from "./$types.js";
-	import type { Article } from "$types/generalTypes";
-
-	// stores
 
 	// data
-	export let data: PageData; // data coming in from page.ts LoadEvent
-
-	// article
-	let article: Article | undefined;
-	$: article = data.article;
-
-	// markup
-	let markup: string;
-	$: markup = article?.markup || "";
-
-	// functions
-	function parseMarkup(markup: string) {
-		const addMargins = markup.replace(/<p>/gi, "<p class='mb-4'>");
-		return addMargins;
-	}
-
-	// formatted markup
-	let text: string;
-	$: text = parseMarkup(markup);
+	let { data } = $props();
 </script>
 
 <template lang="pug">
@@ -53,8 +31,22 @@ Here's some documentation for this component.
 				.w-full.pb-12.max-w-2xl
 					h1.text-19.font-semibold.mb-4(
 						class="lg:text-24") { data.article?.headline }
-					p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
+					+if('data.article?.excerpt')
+						p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
 
-					.text-18.leading-relaxed(
-						class="md:text-[18px]")
-						| {  @html text  }</template>
+					+if('data.article?.text')
+						#text.text-18.leading-relaxed(
+							class="md:text-[18px]")
+							| {  @html data.article?.text?.html  }
+	|</template>
+
+<style lang="postcss">
+	:global(#text p) {
+		margin-bottom: 1rem;
+	}
+	:global(#text h2) {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+</style>

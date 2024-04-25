@@ -5,5 +5,5 @@ siteDescription: marketing website for Verde Climate Solutions
 siteDomain: verdeclimatesolutions.com
 siteName: Verde Climate Solutions
 cloudinaryBaseUrl: https://res.cloudinary.com/dn0pqjjbq/image/upload/
-hygraphEndpointContent: ""
-hygraphEndpointHighSpeed: ""
+hygraphEndpointContent: "https://api-us-east-1.hygraph.com/v2/cl9vgq6lw443r01uf7akr615s/master"
+hygraphEndpointHighSpeed: "https://us-east-1.cdn.hygraph.com/content/cl9vgq6lw443r01uf7akr615s/master"

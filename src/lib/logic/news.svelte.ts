@@ -11,7 +11,6 @@ const newsPageData = YAML.parse(newsPageDataRawYAML);
 
 export function createNews() {
 	let data = $state(newsArticlesData);
-
 	let page = $state(newsPageData);
 
 	let footerNews = $derived.by(() => {
@@ -45,6 +44,9 @@ export function createNews() {
 		get articles() {
 			return data;
 		},
+		// set articles(value: Article[]) {
+		// 	data = value;
+		// },
 		get footerNews() {
 			return footerNews;
 		},

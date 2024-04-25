@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 interface ArticleSource {
-	[key: string]: string | undefined;
+	[key: string]: unknown;
+	author?: string | null;
 	name: string;
 	url: string;
 }

@@ -1,67 +1,56 @@
 # news data
 ---
-- author: ""
+- headline: US DOE Reveals 1st Winners of $2.25B Carbon Storage Program
   date: "2023-05-16T00:00:00.000Z"
   excerpt: >-
     The U.S. Department of Energy (DOE) has opened a $2.25 billion funding
-    program for carbon sequestration or CO2 capture and storage projects to more
-    applicants after selecting the first batch of 9 winners with a $242 million
-    funding round.
-  headline: US DOE Reveals 1st Winners of $2.25B Carbon Storage Program
+    program for carbon sequestration or CO2 capture and storage projects to more applicants after selecting the first batch of 9 winners with a $242 million funding round.
   id: 1foS4SkbuTbLjZK1QVD4z
   image:
-    url: >-
-      https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_19/v1685405043/slac-campus_kn6mlf.avif
-    alt: ""
+    url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_19/v1685405043/slac-campus_kn6mlf.avif
     width: 2400
     height: 1600
-  slug: us-doe-reveals-winners-of-carbon-storage-program
+  imageAlt: ""
+  slug: us-doe-reveals-winners-of-carbon-storage-program"
   source:
     name: CarbonCredits.com
-    url: >-
-      https://carboncredits.com/us-doe-reveals-1st-winners-of-2-25b-carbon-storage-program/
+    url: https://carboncredits.com
+  sourceArticleUrl: https://carboncredits.com/us-doe-reveals-1st-winners-of-2-25b-carbon-storage-program/
   tags: []
-- author: ""
+  text: ""
+  type: news
+- headline: Alaska House follows Senate in passing bill authorizing sale of carbon credits from state land
   date: "2023-05-17T00:00:00.000Z"
   excerpt: >-
-    The Alaska House of Representatives on Tuesday passed a bill that would
-    allow the state to set up a system for using state land to sell
-    carbon-offset credits. The House action amounted to final passage of the
-    bill, which was approved the previous day by the state Senate.
-  headline: >-
-    Alaska House follows Senate in passing bill authorizing sale of carbon
-    credits from state land
+    The Alaska House of Representatives on Tuesday passed a bill that would allow the state to set up a system for using state land to sell
+    carbon-offset credits. The House action amounted to final passage of the bill, which was approved the previous day by the state Senate.
   id: 20ygn3OtqCSH42EYsTqH-
   image:
-    url: >-
-      https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_auto/v1685126313/mt-shasta_qbwnuw.avif
-    alt: ""
+    url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_auto/v1685126313/mt-shasta_qbwnuw.avif
     width: 2400
     height: 1600
+  imageAlt: ""
   slug: alaska-authorizes-sale-of-carbon-credits-from-state-land
   source:
     name: Anchorage Daily News
-    url: >-
-      https://www.adn.com/politics/alaska-legislature/2023/05/17/alaska-house-follows-senate-to-pass-bill-authorizing-sale-of-carbon-credits-from-state-land/
+    url: ""
+  sourceArticleUrl: https://www.adn.com/politics/alaska-legislature/2023/05/17/alaska-house-follows-senate-to-pass-bill-authorizing-sale-of-carbon-credits-from-state-land/
   tags: []
-- author: ""
+  type: news
+- headline: Key Insights from World Bank\’s 2023 Carbon Pricing Report
   date: "2023-05-26T00:00:00.000Z"
   excerpt: >-
-    Amid the global energy crisis and economic issues, revenues from carbon
-    credits traded in emissions trading systems (ETS) and carbon taxes hit
-    record high in 2022 reaching almost $100 billion, per the World Bank carbon
-    pricing report.
-  headline: Key Insights from World Bank’s 2023 Carbon Pricing Report
+    Amid the global energy crisis and economic issues, revenues from carbon credits traded in emissions trading systems (ETS) and carbon taxes hit record high in 2022 reaching almost $100 billion, per the World Bank carbon pricing report."
   id: 3f6_CclRkyH8PeVlBPD7Y
   image:
-    url: >-
-      https://res.cloudinary.com/dn0pqjjbq/image/upload/v1685129517/world_poayvd.avif
+    url: https://res.cloudinary.com/dn0pqjjbq/image/upload/v1685129517/world_poayvd.avif
     alt: ""
     width: 2400
     height: 1600
   slug: key-insights-from-world-banks-2023-carbon-pricing-report
   source:
     name: CarbonCredits.com
-    url: >-
-      https://carboncredits.com/6-key-takeaways-from-world-bank-2023-carbon-pricing-report
+    url: https://carboncredits.com/6-key-takeaways-from-world-bank-2023-carbon-pricing-report
+  sourceArticleUrl: ""
   tags: []
+  type: news

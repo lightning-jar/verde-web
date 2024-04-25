@@ -20,6 +20,7 @@ export const aliasList = {
 	$organisms: "./src/lib/components/organisms",
 	$templates: "./src/lib/components/templates",
 	$pages: "./src/lib/components/pages",
+	$queries: "./src/lib/queries",
 	$routes: "./src/routes",
 	$settings: "./src/lib/settings",
 	$stores: "./src/lib/stores",
