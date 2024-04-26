@@ -10,8 +10,8 @@ export const load: PageServerLoad = async function ({ locals }) {
 	}
 
 	// get content
-	const { content } = locals;
-	const { articles, page }: { articles: Article[]; page: Page } = content.blog;
+	const { articles, page }: { articles: Article[]; page: Page } =
+		locals.content.blog;
 
 	return {
 		articles,

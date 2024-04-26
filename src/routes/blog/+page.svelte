@@ -11,8 +11,6 @@ Here's some documentation for this component.
 	import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
 	import WidgetSubheading from "$atoms/WidgetSubheading.svelte";
 
-	// stores
-
 	let { data } = $props();
 </script>
 
@@ -29,5 +27,6 @@ Here's some documentation for this component.
 			articleFolder="blog/",
 			articles!="{ data.articles }",
 			headlineClasses="font-semibold text-lg",
+			linkClasses="hover:bg-penn-750 hover:shadow-lg",
 			tileBackgroundClasses="shadow-md bg-penn-700")
 	|</template>
