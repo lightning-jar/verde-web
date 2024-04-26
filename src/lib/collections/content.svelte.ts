@@ -11,7 +11,7 @@ export const content = {
 		{
 			articles: blogContent.articles ?? {},
 			page: blogContent.page ?? {},
-			latestBlog: blogContent.latest ?? {},
+			latestBlog: blogContent.latestBlog ?? {},
 		} ?? {},
 	contactPage: contactPage.data ?? {},
 	glossary: { entries: glossary.entries, page: glossary.page } ?? {},

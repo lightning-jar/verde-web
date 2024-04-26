@@ -8,8 +8,13 @@ export const load: PageServerLoad = async function ({ locals, params, url }) {
 	const { articles }: { articles: Article[] } = content.blog;
 
 	// get article
-	const article = articles.find((article) => article.slug === slug);
-	//console.log(article);
+	const articleIndex = articles.findIndex((article) => article.slug === slug);
+	const article = articles[articleIndex];
+	const nextArticle = articles[articleIndex + 1];
+	const nextArticleSlug = nextArticle ? nextArticle.slug : articles[0].slug;
+	const nextArticleTitle = nextArticle
+		? nextArticle.headline
+		: articles[0].headline;
 
 	// if article not found, return 404
 	if (!article) {
@@ -25,6 +30,8 @@ export const load: PageServerLoad = async function ({ locals, params, url }) {
 
 	return {
 		article,
+		nextArticleSlug,
+		nextArticleTitle,
 		meta,
 	};
 };

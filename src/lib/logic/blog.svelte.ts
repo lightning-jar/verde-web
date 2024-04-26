@@ -1,52 +1,37 @@
-// import YAML
-import YAML from "yaml";
+import { fetchBlogPage } from "$lib/fetch/fetchBlog.svelte";
 
-interface BlogArticle {
-	author: string;
-	date: string;
-	excerpt: string;
-	headline: string;
-	id: string;
-	image: Image;
-	markup: string;
-	slug: string;
-	tags: string[];
-}
-
-// import raw data
-import { default as blogArticlesDataRawYAML } from "$data/blog.yaml?raw";
-import { default as blogPageDataRawYAML } from "$data/blogPage.yaml?raw";
-
-// parse raw data
-const blogArticlesDataRaw = YAML.parse(blogArticlesDataRawYAML);
-const blogPageDataRaw = YAML.parse(blogPageDataRawYAML);
+console.log("fetching blog page content");
+const blogPageData = (await fetchBlogPage(true)) as ArticlesPage;
 
 export function createBlog() {
-	let articlesData = $state(blogArticlesDataRaw as BlogArticle[]);
-	let pageData = $state(blogPageDataRaw);
-
-	let latestBlogArticles = $derived.by(() => {
-		const latest = articlesData.slice(0, 20);
-		const articles = latest.map((article) => {
-			const { headline, image, slug } = article;
-			return {
-				headline,
-				image,
-				slug: slug,
-			};
-		});
-		return articles;
-	});
+	let header = $state(blogPageData.header);
+	let meta = $state(blogPageData.meta);
+	let articles = $state(blogPageData.articles);
 
 	return {
 		get articles() {
-			return articlesData;
+			return articles;
+		},
+		set articles(value: Article[]) {
+			if (!value) return;
+			articles = value;
+			return;
+		},
+		get latestBlog() {
+			return articles.slice(0, 20)?.map((article: Link) => {
+				return {
+					headline: article.headline,
+					url: article.slug,
+					image: article.image,
+				};
+			});
 		},
 		get page() {
-			return pageData;
-		},
-		get latest() {
-			return latestBlogArticles;
+			return {
+				header,
+				meta,
+				articles,
+			};
 		},
 	};
 }

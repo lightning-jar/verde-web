@@ -1,9 +1,6 @@
-// import YAML
-import YAML from "yaml";
-
 import { fetchNewsPage } from "$lib/fetch/fetchNews.svelte";
 
-console.log("fetching news articles");
+console.log("fetching news page content");
 const newsPageData = (await fetchNewsPage(true)) as ArticlesPage;
 
 export function createNews() {

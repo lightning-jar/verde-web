@@ -1,6 +1,20 @@
-export const allNews = `
-	query newsArticles {
-		articles(where: {type: news}) {
+export const blogPageQuery = `
+query BlogPage {
+  articlesPages(where: {name: "Blog Page"}) {
+    id
+    name
+    header {
+      headline
+      text
+    }
+    meta {
+      title
+      shortTitle
+      description
+      analyticsOn
+      robotsFollow
+    }
+    articles {
       author
       date
       excerpt
@@ -26,8 +40,8 @@ export const allNews = `
       text {
         html
       }
-      type
     }
-	}
+    }
+  }
 `;
-export default allNews;
+export default blogPageQuery;

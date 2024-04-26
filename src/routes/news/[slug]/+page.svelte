@@ -10,7 +10,7 @@ Here's some documentation for this component.
 	import type { PageData } from "./$types.js";
 
 	// data
-	export let data: PageData; // data coming in from page.ts LoadEvent
+	let { data } = $props(); // data coming in from page.ts LoadEvent
 
 	// formatted markup
 </script>

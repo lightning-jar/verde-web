@@ -7,12 +7,10 @@ import { hygraphHighSpeed } from "$lib/hygraph.server";
 import YAML from "yaml";
 
 // import raw data
-import { default as newsArticlesBackupDataYAML } from "$data/news.yaml?raw";
 import { default as newsPageBackupDataYAML } from "$data/newsPage.yaml?raw";
 
 // parse raw data
-// prettier-ignore
-const newsArticlesBackupData: Article[] = YAML.parse(newsArticlesBackupDataYAML);
+const newsPageBackupData: ArticlesPage = YAML.parse(newsPageBackupDataYAML);
 
 // queries
 import { newsPageQuery } from "$queries/newsPage";
@@ -33,6 +31,6 @@ export async function fetchNewsPage(building: boolean) {
 		return newsPage;
 	} catch (error) {
 		console.log(error, "using backup data for news");
-		return newsArticlesBackupData;
+		return newsPageBackupData;
 	}
 }

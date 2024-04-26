@@ -1,65 +1,377 @@
+id: clvfkuqg400zv07inwqf75c6f
+name: News Page
 header:
   headline: News
-  text: >-
-    Recent news from around the industry on carbon credits, carbon reduction and related topics.
+  text: Recent news from around the industry on carbon credits, carbon reduction
+    and related topics.
 meta:
   title: Verde | News
-  shortTitle: News
-  description: >-
-    Recent news from around the industry on carbon credits, carbon reduction and related topics.
+  shortTitle: news
+  description: Recent news from around the industry on carbon credits, carbon
+    reduction and related topics.
+  analyticsOn: true
   robotsFollow: true
-  plausibleAnalytics: true
 articles:
-  - headline: US DOE Reveals 1st Winners of $2.25B Carbon Storage Program
-    date: "2023-05-16T00:00:00.000Z"
-    excerpt: >-
+  - author: null
+    date: 2023-05-16
+    excerpt:
       The U.S. Department of Energy (DOE) has opened a $2.25 billion funding
-      program for carbon sequestration or CO2 capture and storage projects to more applicants after selecting the first batch of 9 winners with a $242 million funding round.
-    id: 1foS4SkbuTbLjZK1QVD4z
+      program for carbon sequestration or CO2 capture and storage projects to
+      more applicants after selecting the first batch of 9 winners with a $242
+      million funding round.
+    headline: US DOE Reveals First Winners of $2.25B Carbon Storage Program
+    id: clve3llx4yitm07iqhkc220hn
     image:
-      url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_19/v1685405043/slac-campus_kn6mlf.avif
+      id: clve3nsfmyrz107k2rx6h35fc
+      fileName: slac-campus_kn6mlf.jpg
+      url: https://media.graphassets.com/cxj7NUFSCCZ9YoGBuvwn
       width: 2400
       height: 1600
-    imageAlt: ""
-    slug: us-doe-reveals-winners-of-carbon-storage-program"
+      mimeType: image/jpeg
+    imageAlt: SLAC campus at night
+    slug: us-doe-reveals-winners-of-carbon-storage-program
     source:
+      id: clvfas21euc5u07ivvamvpg4r
       name: CarbonCredits.com
       url: https://carboncredits.com
     sourceArticleUrl: https://carboncredits.com/us-doe-reveals-1st-winners-of-2-25b-carbon-storage-program/
-    tags: []
-    text: ""
-    type: news
-  - headline: Alaska House follows Senate in passing bill authorizing sale of carbon credits from state land
-    date: "2023-05-17T00:00:00.000Z"
-    excerpt: >-
-      The Alaska House of Representatives on Tuesday passed a bill that would allow the state to set up a system for using state land to sell carbon-offset credits. The House action amounted to final passage of the bill, which was approved the previous day by the state Senate.
-    id: 20ygn3OtqCSH42EYsTqH-
+    tags:
+      - carbon storage
+      - DOE
+      - carbon sequestration
+    text:
+      html: <h2>The $4.9B Funding from Bipartisan Infrastructure Law</h2><p>In
+        November 2021, President Joe Biden signed the <a
+        title="https://www.whitehouse.gov/briefing-room/statements-releases/2021/11/06/fact-sheet-the-bipartisan-infrastructure-deal/"
+        href="https://www.whitehouse.gov/briefing-room/statements-releases/2021/11/06/fact-sheet-the-bipartisan-infrastructure-deal/">Bipartisan
+        Infrastructure Law</a>, a once-in-a-generation investment to tackle the
+        climate crisis. The law earmarked about $12 billion to carbon
+        management, specifically to carbon capture, storage, and transportation
+        of CO2. </p><p>Under this law, the DOE revealed its $4.9 billion funding
+        for 3 carbon management demonstration and deployment programs. These
+        funding opportunities seek to slash emissions from power generation and
+        sectors that are difficult to decarbonize like steel and
+        cement. </p><p>According to the Energy Secretary, Jennifer Granholm, the
+        series of funding initiatives are crucial in meeting Biden’s goal to
+        reach a net zero economy by 2050. </p><p>The Department also launched
+        four programs with <a
+        title="https://carboncredits.com/us-doe-to-invest-3-7-billion-on-carbon-removal-technologies/"
+        href="https://carboncredits.com/us-doe-to-invest-3-7-billion-on-carbon-removal-technologies/">$3.7
+        billion funding</a> to help scale up the carbon dioxide removal
+        industry. These include the $115 million prize awards to <a
+        title="https://carboncredits.com/how-direct-air-capture-works-and-4-important-things-about-it/"
+        href="https://carboncredits.com/how-direct-air-capture-works-and-4-important-things-about-it/">Direct
+        Air Capture</a> technologies to bolster different approaches to DAC. The
+        program also includes building regional DAC hubs in the
+        country. </p><h2>DOE’s $2.25B Program for Carbon Capture and
+        Storage</h2><p>One of the Department’s new funding opportunities is
+        the $2.25 billion for the validation and testing of large-scale,
+        commercial carbon storage projects. Qualifying projects should be
+        capable of storing 50 million tonnes of CO2 and the Department just
+        revealed the winning applicants. </p><ul><li><div>The agency picked 9
+        commercial carbon storage projects qualified for federal funding. These
+        winning projects are found in the Midwest, West and on the Gulf
+        Coast. </div></li></ul><p>The recipients include 4 higher education
+        institutions, BP PLC subsidiary BP Corporation North America, and the
+        Southern States Energy Board.</p><p>Pointing out that the funding wisely
+        focuses on carbon storage projects, an executive from the Carbon Capture
+        Coalition stated:</p><p><em>“The US has abundant, well-characterized
+        carbon storage capacity that can safely and permanently store billions
+        of tons of carbon dioxide emissions, but currently lacks the
+        necessary infrastructure and capture facilities to fully utilize this
+        potential”.</em></p><p>Indeed, the recent funding announcement will help
+        address that infrastructure gap. </p><p>Earlier this year, the <a
+        title="https://carboncredits.com/u-s-doe-funds-carbon-capture-programs-with-2-5-billion/"
+        href="https://carboncredits.com/u-s-doe-funds-carbon-capture-programs-with-2-5-billion/">DOE
+        also rolled out $2.52 billion</a> to fund 2 carbon capture initiatives.
+        These are the “Carbon Capture Large-Scale Pilots” and “Carbon Capture
+        Demonstration Projects Program” seeking to cut emissions from
+        hard-to-abate industries. The main goal is to speed up and boost
+        investment in technologies that capture, transport and store
+        carbon.</p><p>All these funds for carbon capture and removal projects
+        are part of the total of $62 billion dedicated by the bipartisan
+        infrastructure law for DOE’s research, development, demonstration, and
+        deployment of clean energy technologies. </p><h3>Expanding Carbon
+        Capture and Storage </h3><p>Complementing the Bipartisan Infrastructure
+        Law, the Congress expanded the tax credits for carbon capture in the <a
+        title="https://carboncredits.com/us-congress-369-billion-climate-change-bill/"
+        href="https://carboncredits.com/us-congress-369-billion-climate-change-bill/">2022
+        Inflation Reduction Act</a>. It awards polluters up to $85 for every
+        metric ton of carbon captured and stored safely
+        underground. </p><ul><li><div>As per DOE’s estimates, actions under the
+        two laws will result in 40% emissions reduction against 2005 levels
+        economy-wide.</div></li></ul><p>The agency further said that the
+        remaining funds for carbon storage are available under a broader scope.
+        The funding program now includes early-stage development projects while
+        expanding the definition of carbon storage to support more offshore
+        projects. Project developers can apply under the program until July
+        6. </p><p>The Department also selected 3 carbon transportation projects
+        in Texas and Wyoming to receive funding from another program. Together,
+        they’ll get a total of $9 million for engineering and design
+        activities. </p>
+  - author: null
+    date: 2023-05-17
+    excerpt:
+      The Alaska House of Representatives passed a bill that would allow the
+      state to set up a system for using state land to sell carbon-offset
+      credits. The action amounted to final passage of the bill, which has been
+      approved by the state Senate.
+    headline:
+      Alaska House follows Senate in passing bill authorizing sale of carbon
+      credits from state land
+    id: clvfa54ks1jiq07k5ccid3lb2
     image:
-      url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_auto/v1685126313/mt-shasta_qbwnuw.avif
+      id: clvfa5ly9tujm07k2no5sg9a6
+      fileName: mt-shasta_qbwnuw.jpg
+      url: https://media.graphassets.com/CSvqRZXSXermvfGrVPSX
       width: 2400
       height: 1600
-    imageAlt: ""
+      mimeType: image/jpeg
+    imageAlt: image of mount shasta
     slug: alaska-authorizes-sale-of-carbon-credits-from-state-land
     source:
+      id: clvgle0ng0v2f07k43p9zlrfe
       name: Anchorage Daily News
-      url: ""
+      url: https://www.adn.com
     sourceArticleUrl: https://www.adn.com/politics/alaska-legislature/2023/05/17/alaska-house-follows-senate-to-pass-bill-authorizing-sale-of-carbon-credits-from-state-land/
-    tags: []
-    type: news
-  - headline: Key Insights from World Bank’s 2023 Carbon Pricing Report
-    date: "2023-05-26T00:00:00.000Z"
-    excerpt: >-
-      Amid the global energy crisis and economic issues, revenues from carbon credits traded in emissions trading systems (ETS) and carbon taxes hit record high in 2022 reaching almost $100 billion, per the World Bank carbon pricing report."
-    id: 3f6_CclRkyH8PeVlBPD7Y
+    tags:
+      - carbon credits
+      - Alaska
+    text:
+      html:
+        "<p>The Alaska House of Representatives on Tuesday passed a bill that
+        would allow the state to set up a system for using state land to sell
+        carbon-offset credits. The House action amounted to final passage of the
+        bill, which was approved the previous day by the state Senate.</p><p>The
+        measure, Senate Bill 48, authorizes the Alaska Department of Natural
+        Resources to lease out state land for up to 55 years for the purpose of
+        preserving its powers to absorb atmospheric carbon.</p><p>The bill has
+        been a high priority for Gov. Mike Dunleavy. The Republican governor
+        responded immediately after the House vote with a brief message on
+        Twitter: “Thank you to the House for passing SB 48! We are changing the
+        conversation for Alaska concerning new revenue.”</p><p>A follow-up news
+        release by the governor’s office said that once the bill is signed into
+        law, the Alaska Department of Natural Resources will begin to develop
+        regulations for the program, and that there will be a “robust public
+        input process” as those rules are created.</p><p>“Today marks an
+        exciting new chapter for natural resources in Alaska with the passage of
+        Governor Mike Dunleavy’s carbon offset bill,” John Boyle, commissioner
+        of the Department of Natural Resources, said in the governor’s release.
+        He credited work by his department and by the Alaska Oil and Gas
+        Conservation Commission.</p><p>From left to right: Alaska Department of
+        Natural Resources Commissioner John Boyle, special assistant Rena Miller
+        and legislative liaison Joseph Byrnes smile on Tuesday, May 16, 2023, in
+        the House chambers shortly before House Bill 48, the governor’s carbon
+        credits measure, passed the House. (James Brooks / Alaska
+        Beacon)</p><p>“I’m grateful our DNR experts and AOGCC partners were able
+        to work with the legislature to deliver a bill giving Alaska a new
+        revenue stream that complements our current resource development
+        industries and Alaskans’ use of State land,” Boyle said. “I’m
+        particularly excited about the opportunities to more actively manage and
+        invest in our forests.”</p><p>Most of the comments made on the House
+        floor leading up to the vote touted the bill’s potential for generating
+        state revenue from national and global demand for carbon offsets, which
+        are seen as tools to combat climate change. Because of its focus on the
+        state’s forested land, the measure has been dubbed the “tree”
+        bill.</p><p>But at least one legislator, Rep. Andy Josephson,
+        D-Anchorage, described it as good for the Alaska environment, aside from
+        its resource-development qualities.</p><p>“In fact, it’s supposed to, it
+        must, it’s compelled to have no net loss on biomass. We heard that
+        testimony. So this is, in that respect, a conservation bill from an
+        Alaskan lens,” he said during a Tuesday afternoon House Finance
+        Committee hearing that preceded the floor vote.</p><p>Rep. Andy
+        Josephson, D-Anchorage, asks a question about Senate Bill 48, the carbon
+        credits bill, on Tuesday, May 16, 2023, in the House Finance Committee.
+        (James Brooks / Alaska Beacon)</p><p>Unlike the Senate vote on Monday,
+        Tuesday’s House vote was not unanimous. There were two votes against the
+        bill — from Rep. David Eastman, R-Wasilla, who called it “climate
+        communism,” and Rep. Sarah Vance, R-Homer.</p><p>A separate-but-related
+        bill introduced by Dunleavy would establish a system for using old oil
+        and gas wells to sequester carbon gases produced through petroleum
+        operations and other industrial activities. That proposal, in Senate
+        Bill 49 and House Bill 50 and nicknamed the “hole” bill, did not move as
+        quickly as the carbon-offsets bill. However, one element of the “hole”
+        bill was transferred to Senate Bill 48: a provision authorizing AOGCC to
+        gain primary enforcement authority over the injection wells that would
+        be used to store the carbon. Currently, the federal Environmental
+        Protection Agency has enforcement authority over those wells in
+        Alaska.</p>"
+  - author: null
+    date: 2024-05-26
+    excerpt:
+      Amid the global energy crisis and economic issues, revenues from carbon
+      credits traded in emissions trading systems (ETS) and carbon taxes hit
+      record high in 2022 reaching almost $100 billion, per the World Bank
+      carbon pricing report.
+    headline: Key Insights from World Bank’s 2023 Carbon Pricing Report
+    id: clvfak74t1n0z07izpduaxroj
     image:
-      url: https://res.cloudinary.com/dn0pqjjbq/image/upload/v1685129517/world_poayvd.avif
-      alt: ""
+      id: clvfb1qrs1v0e07k5f094we4g
+      fileName: world_poayvd.jpg
+      url: https://media.graphassets.com/JjiFEzfGT6aOwHHpCp31
       width: 2400
       height: 1600
+      mimeType: image/jpeg
+    imageAlt: cartoon style drawing of earth
     slug: key-insights-from-world-banks-2023-carbon-pricing-report
     source:
+      id: clvfas21euc5u07ivvamvpg4r
       name: CarbonCredits.com
       url: https://carboncredits.com
-    sourceArticleUrl: "https://carboncredits.com/6-key-takeaways-from-world-bank-2023-carbon-pricing-report"
-    tags: []
-    type: news
+    sourceArticleUrl: https://carboncredits.com/6-key-takeaways-from-world-bank-2023-carbon-pricing-report
+    tags:
+      - ETS
+      - Carbon Credits
+      - Carbon Pricing
+    text:
+      html:
+        <p>Amid the global energy crisis and economic issues, revenues from carbon
+        credits traded in emissions trading systems (ETS) and carbon taxes hit
+        record high in 2022 reaching almost $100 billion, per the World Bank
+        carbon pricing report. </p><p>Carbon pricing is an essential policy tool
+        useful in decarbonizing global economies. Through various instruments,
+        carbon prices bring economic incentives to make climate-friendly changes
+        in consumption, production, and investment. </p><p>The World Bank’s <a
+        title="https://openknowledge.worldbank.org/entities/publication/58f2a409-9bb7-4ee6-899d-be47835c838f"
+        href="https://openknowledge.worldbank.org/entities/publication/58f2a409-9bb7-4ee6-899d-be47835c838f">State
+        and Trends in Carbon Pricing 2023</a> report provides an updated
+        overview of the existing and emerging carbon pricing instruments
+        worldwide. It also explores the trends and drivers of those instruments,
+        including carbon taxes, carbon crediting mechanisms, and emissions
+        trading systems. </p><p>As highlighted in the report, carbon pricing has
+        to continue growing, in price and coverage, to drive climate action and
+        meet the Paris goals. Here are the six key takeaways from the World Bank
+        carbon pricing report. </p><h2>#1. Carbon prices growth slowed but
+        showed resilience</h2><p>After years of high growth, carbon prices in
+        ETSs and carbon taxes had slowed but showed resilience. They have made
+        it through the global energy crisis last year, and even half of the
+        instruments’ prices have increased. About a third have the same prices
+        while fewer than <strong>15%</strong> decline. </p><p>The European Union
+        ETS recorded the largest increases, with price surging 100 Euros for the
+        first time. It is linked with the Switzerland ETSs. </p><h4>But in other
+        ETS, carbon prices were down by up to 35% like the case of Republic of
+        Korea ETS.</h4><p>While some countries or jurisdictions toned down their
+        plans to increase carbon prices, many didn’t. In fact, several of them
+        decided to strengthen their existing ETSs and carbon taxes in the coming
+        years. </p><p>For instance, Singapore made changes in its carbon pricing
+        bill that will increase the nation’s carbon tax beginning in 2026, from
+        <u>USD 4-34 to USD 38-60</u>. Likewise, Canada is pursuing its plan to
+        increase its federal baseline to go over <u>USD 127 by
+        2030</u>. </p><p>Apart from policy changes, energy markets and drought
+        were some of the biggest factors affecting carbon prices in most ETSs.
+        In many European nations, the combined effects were enough to halt the
+        declining trend in coal use while higher power sector CO2 emissions
+        caused EU ETS to rise. </p><p>Overall, carbon prices have to grow in the
+        long term to drive investments at the scale and pace needed. To keep
+        global warming below 2°C, prices need to reach <u>$50/tCO2 to $100/tCO2
+        by 2030</u>. Factoring in inflation, that price range would be
+        at<strong> </strong>$61 to $122 by 2030 in 2023 USD. </p><p>As of April
+        2023, under <strong>5%</strong> of global GHG emissions are covered by a
+        direct carbon price at or above the range suggested by 2030 (in 2023 US
+        dollar value). Most of these high-price carbon pricing instruments are
+        found in European countries as seen in the chart below. Blue shades
+        refer to ETS prices while the pink ones represent carbon
+        taxes. </p><h2>#2. Number of ETSs and carbon taxes implemented slightly
+        grew</h2><p>The number of ETS and carbon taxes adopted has gone up
+        slightly to <strong>73 as of April 2023</strong>. The increase is mostly
+        in countries that are already pricing carbon, referring to the map
+        below. </p><p>In 2022, several jurisdictions delivered on their existing
+        plans for new ETSs or carbon taxes or increased their ambition. Some of
+        them also revealed more proposals to develop new carbon pricing
+        initiatives. </p><p>Emerging economies are showing growing interest in
+        adopting carbon credit instruments but high-income nations still
+        dominate the global market. </p><p>Overall, the little increase in the
+        carbon instruments in operation cover about<strong> 23%</strong> of
+        global carbon emissions. This rise represents a below
+        <strong>1%</strong> increase relative to the previous
+        year. </p><p>Carbon pricing mechanisms today are mainly focused on
+        energy and industrial emissions. Most carbon taxes cover certain fossil
+        fuels used in different sectors, while ETSs often focus on big
+        industrial facilities. </p><p>New Zealand will be the first country in
+        the world to put a price on agricultural emissions in 2025. This is
+        separate from the country’s existing ETS and will be applied at the farm
+        level. </p><p>While other countries are also considering the creation of
+        future ETS such as Malaysia, Vietnam, and Thailand, for instance.
+        Meanwhile, Taiwan and China early this year passed a law to introduce a
+        carbon tax on heavy emitters.</p><h2>#3. Record high carbon revenues
+        almost at $100 billion </h2><p>This is perhaps the highlight of the
+        report. Total carbon revenues from ETSs and taxes jump by over
+        <strong>10%</strong> in 2022, hitting about <strong>$95
+        billion</strong>. Compared to last year, the increase is worth
+        <strong>$10 billion</strong>. </p><p>Carbon revenues are the product of
+        the carbon price, specific emissions covered, and other pricing design
+        factors like rebates and allocation methods. </p><p>Revenue in the EU
+        ETS alone has grown<strong> 7x</strong> from 2017 amounts, generating a
+        total of <strong>$42 billion</strong> in 2022. The <strong>$7.8
+        billion</strong> increase accounts for over <strong>76%</strong> of the
+        total increase in global carbon pricing revenues. This is partly because
+        of higher prices, but also due to the shift from free carbon allowance
+        allocation to auctioning.</p><p>In 2022, ETSs represented about<strong>
+        69%</strong> of government income from direct carbon prices, while
+        carbon taxes took the remaining <strong>31%</strong>.</p><p>As to where
+        the governments spend the carbon revenues, the following figure shows
+        the percent share of different uses.  </p><h2>#4. Carbon credit markets
+        slowed, and demand is mostly voluntary </h2><p>After 2 years of steep
+        growth, carbon credit markets slowed last year, with a
+        +<strong>1%</strong> drop in retirements from 2021. A total of
+        <strong>196 million</strong> carbon credits were retired in
+        2022. </p><ul><li><div>The supply of new carbon credits and demand from
+        end users decreased a little bit, reversing the previous year’s
+        increase.</div></li></ul><p>As seen below, independent crediting
+        mechanisms or <a
+        title="https://carboncredits.com/voluntary-carbon-market-can-be-worth-1-trillion-in-2037/"
+        href="https://carboncredits.com/voluntary-carbon-market-can-be-worth-1-trillion-in-2037/">voluntary
+        carbon markets</a> supply most of the credits. But credit issuances from
+        international mechanisms like the Clean Development Mechanism (CDM) grew
+        in 2022, representing <strong>30%</strong> of total
+        issuance. </p><p>Voluntary corporate use of carbon credits remains to be
+        the major source of demand in the market. </p><p>Also, more and more
+        nations are thinking about establishing their own carbon credit
+        mechanisms. This plan is often in conjunction with an ETS or carbon tax
+        policy. </p><p>For example, both Indonesia and Vietnam made some
+        preparations to establish domestic carbon credit schemes while South
+        Africa assessed their internal standards to produce credits.</p><h2>#5.
+        Nature-Based carbon credits may overtake Renewable
+        Energy</h2><p>Renewable energy still dominates carbon markets. The share
+        of carbon credits generated by renewable energy activities has been
+        rising since 2018. They represent about 45% of registered projects and
+        account for 55% of credit issuances in 2022. </p><p>In terms of carbon
+        credits retired last year, 52% came from renewable energy projects, up
+        from 44% in 2021. <a title="go to glossary definition of RECs"
+        href="/glossary#renewable-energy-credits-recs">Renewable energy credits
+        (RECs)</a> are still widely available and among the cheapest credit
+        types.</p><p>But as the cost of renewable energy fell significantly over
+        the last 10 years, RE projects may no longer need the extra revenues
+        from carbon credits. This signals that the value of RECs will eventually
+        go down.  </p><p>Thus, the supply of carbon credits from large RE
+        projects will most likely decline over time. Some voluntary carbon
+        crediting schemes have restricted eligibility, particularly for projects
+        in the least developed nations. </p><p>Meanwhile, there has been a
+        growing focus on nature-based activities. These include projects
+        involving emissions reductions from agriculture and forestry and land
+        use. The credits they produce often deliver co-benefits – other
+        socio-economic benefits aside from carbon reduction – valued by many
+        buyers.</p><p>Though credit issuances from forestry and land use
+        activities drop in 2022, this may change soon, according to industry
+        experts. Last year, <strong>54%</strong> of new projects registered were
+        for nature-based solutions, indicating a potential for supply expansion
+        in the future.  </p><h2>#6. Exchange-traded credits from removal
+        projects trade at a premium </h2><p>Carbon credit prices and trends vary
+        across market segments and project types. Nature-based credits saw the
+        highest price drop, from as much as $16 to below $5.</p><p>The rising
+        use of standardized contracts is considered one factor of a downward
+        trend in prices as seen below. </p><p>The price gap across most credit
+        types or categories has narrowed, with exchange-traded credits from
+        removal projects trading at a premium. Compared to carbon allowances
+        traded in an ETS, carbon credits are heterogeneous. </p><p>Carbon credit
+        prices vary due to several factors such as project type, credit issuer,
+        credit vintage, and co-benefits. Hence, prices of different credit types
+        vary a lot, reflecting project costs as well as buyer preferences. Newer
+        credits sell at higher prices, according to Xpansiv CBL’s 2022 trading
+        data.</p><p>Lastly, the carbon credit market continues to grow in
+        diversity and sophistication, per World Bank’s report. More service
+        providers, advanced technological platforms, improved products, and new
+        investors will further drive market growth.</p><p>And as more countries
+        sign deals to produce credits from emissions reductions and new
+        integrity initiatives develop, standardization and transparency in the
+        carbon credit market will follow soon. </p>
