@@ -18,6 +18,26 @@ Here's some documentation for this component.
 <template lang="pug">
 	PageContainer(
 		classes="bg-penn")
+		//- breadcrumb
+		nav(
+			class="mb-8")
+			ul.flex.gap-2
+				li.flex.gap-2
+					a(
+						class=`
+						 	decoration-white/20
+							opacity-80
+							text-17
+							text-neutral-100
+							underline
+							underline-offset-4
+							hover:decoration-white/80
+							hover:opacity-100`,
+						href="/news") News
+					.opacity-60 /
+				//-li
+					span.text-17.opacity-80.text-neutral-100
+						| { data.article.slug ? data.article.slug : "source" }
 		.grid(
 			class="lg:grid-cols-3")
 			div(
@@ -55,21 +75,22 @@ Here's some documentation for this component.
 						class="md:text-[18px]") {  @html data.article?.text?.html.substring(0,2000) + '...'  }
 
 					//- read full article cta
-					a(
-						class=`
-							border
-							inline-block
-							opacity-90
-							px-4
-							py-2
-							rounded-md
-							text-16
-							text-primary-100
-							underline-offset-4
-							hover:underline`,
-						href!="{ data.article.url }",
-						rel="external noopener noreferrer",
-						tile!="read this article at {data.article?.source?.name ?? 'source'}") Read Full Article
+					+if('data.article?.sourceArticleUrl')
+						a(
+							class=`
+								border
+								inline-block
+								mb-8
+								opacity-90
+								px-4
+								py-2
+								rounded-md
+								text-16
+								text-primary-100
+								hover:bg-penn-800`,
+							href!="{ data.article.sourceArticleUrl }",
+							rel="external noopener noreferrer",
+							title!="read this full article at {data.article?.source?.name ? data.article?.source?.name : 'source'} ") Read Full Article
 
 					//- back to news
 					.flex.gap-8
