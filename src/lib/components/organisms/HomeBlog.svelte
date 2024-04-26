@@ -49,7 +49,7 @@ Here's some documentation for this component.
 					articleFolder="blog/",
 					articleLimit!="{ 4 }",
 					articles!="{ articles }",
-					headlineClasses="mb-6",
+					headlineClasses="font-semibold mb-6",
 					linkClasses="border-penn hover:shadow hover:bg-penn hover:text-white",
 					tileBackgroundClasses="shadow bg-neutral-100/90")
 

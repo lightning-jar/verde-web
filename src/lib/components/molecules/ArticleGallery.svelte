@@ -43,7 +43,8 @@ Here's some documentation for this component.
 			lg:grid-cols-3
 			xl:grid-cols-4`)
 		+each('limitedArticles as article, index')
-			+const('articleUrl = articleFolder + article?.slug')
+			+const('url = article?.slug ?? article.url')
+			+const('articleUrl = articleFolder + url')
 			.relative.w-full.h-full
 				ArticleTile(
 					backgroundClasses!="{ tileBackgroundClasses }",
