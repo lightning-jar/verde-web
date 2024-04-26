@@ -24,10 +24,6 @@ import { sequence } from "@sveltejs/kit/hooks";
 // handle function
 import type { Handle } from "@sveltejs/kit";
 
-// reach out to data source to refresh content
-import { updateNews } from "$lib/fetch/fetchNews.server";
-updateNews(true);
-
 // import collections
 import content from "$collections/content.svelte";
 import redirects from "$collections/redirects";

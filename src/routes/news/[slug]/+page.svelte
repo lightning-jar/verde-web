@@ -31,10 +31,63 @@ Here's some documentation for this component.
 
 				//- body
 				.w-full.pb-12.max-w-2xl
+					//- metadata
+					.flex.mb-6
+						+if('data.article?.source?.name')
+							a(
+								class=`
+									inline-block
+									opacity-80
+									text-17
+									text-neutral-100
+									underline-offset-4
+									hover:underline`,
+								href!="{ data.article.source.url }",
+								rel="external noopener noreferrer") { data.article?.source?.name }
+								.inline-block.px-2 |
+						span.text-17.opacity-80.text-neutral-100
+							| { data.article?.date }
 					h1.text-19.font-semibold.mb-4.capitalize(
 						class="lg:text-24") { data.article?.headline }
 					p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
 
-					#article-text.text-18.leading-relaxed(
-						class="md:text-[18px]")
-						| {  @html data.article?.text?.html  }</template>
+					#article-text.text-18.leading-relaxed.mb-8(
+						class="md:text-[18px]") {  @html data.article?.text?.html.substring(0,2000) + '...'  }
+
+					//- read full article cta
+					a(
+						class=`
+							border
+							inline-block
+							opacity-90
+							px-4
+							py-2
+							rounded-md
+							text-16
+							text-primary-100
+							underline-offset-4
+							hover:underline`,
+						href!="{ data.article.url }",
+						rel="external noopener noreferrer",
+						tile!="read this article at {data.article?.source?.name ?? 'source'}") Read Full Article
+
+					//- back to news
+					.flex.gap-8
+						+each("[['/news','← Back to News', 'go back to browsing all news stories'],[data.nextArticleSlug, 'Next Article →', data.nextArticleTitle]] as link")
+							a(
+								class=`
+									block
+									decoration-white/20
+									mt-8
+									opacity-80
+									text-17
+									text-primary-100
+									underline-offset-4
+									underline
+									hover:underline
+									hover:decoration-white/80
+									hover:opacity-100`,
+								href!="{ link[0] }",
+								title!="{ link[2] ?? null }") { link[1] }
+
+	|</template>

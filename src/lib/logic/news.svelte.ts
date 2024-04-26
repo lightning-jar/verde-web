@@ -1,64 +1,48 @@
 // import YAML
 import YAML from "yaml";
 
-// import raw data
-import { default as newsArticlesDataRawYAML } from "$data/news.yaml?raw";
-import { default as newsPageDataRawYAML } from "$data/newsPage.yaml?raw";
+import { fetchNewsPage } from "$lib/fetch/fetchNews.svelte";
 
-// parse raw data
-const newsArticlesData: Article[] = YAML.parse(newsArticlesDataRawYAML);
-const newsPageData = YAML.parse(newsPageDataRawYAML);
+console.log("fetching news articles");
+const newsPageData = (await fetchNewsPage(true)) as ArticlesPage;
 
 export function createNews() {
-	let data = $state(newsArticlesData);
-	let page = $state(newsPageData);
-
-	let footerNews = $derived.by(() => {
-		const latest = data.slice(0, 3);
-
-		const links: Link[] = latest.map((news: Link) => {
-			return {
-				label: news.headline,
-				url: `news/${news.slug}`,
-			} as Link;
-		});
-
-		return links;
-	});
-
-	let latestNews = $derived.by(() => {
-		const latest = data.slice(0, 2);
-
-		const links = latest.map((news: Link) => {
-			return {
-				headline: news.headline,
-				url: news.slug,
-				image: news.image,
-			};
-		});
-
-		return links;
-	});
+	let header = $state(newsPageData.header);
+	let meta = $state(newsPageData.meta);
+	let articles = $state(newsPageData.articles);
 
 	return {
 		get articles() {
-			return data;
+			return articles;
 		},
 		set articles(value: Article[]) {
 			if (!value) return;
-			console.log("setting articles");
-			data = value;
-			console.log(data);
+			articles = value;
 			return;
 		},
 		get footerNews() {
-			return footerNews;
+			return articles.slice(0, 3)?.map((news: Link) => {
+				return {
+					label: news.headline,
+					url: news.slug,
+				};
+			});
 		},
 		get latestNews() {
-			return latestNews;
+			return articles.slice(0, 3)?.map((news: Link) => {
+				return {
+					headline: news.headline,
+					url: news.slug,
+					image: news.image,
+				};
+			});
 		},
 		get page() {
-			return page;
+			return {
+				header,
+				meta,
+				articles,
+			};
 		},
 	};
 }

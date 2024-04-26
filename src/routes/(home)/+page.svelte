@@ -12,7 +12,7 @@ Here's some documentation for this component.
 
 	let { data } = $props();
 
-	$inspect(data.latestBlog);
+	// $inspect(data.latestBlog);
 </script>
 
 <template lang="pug">

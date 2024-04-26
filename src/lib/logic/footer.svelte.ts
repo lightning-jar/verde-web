@@ -2,17 +2,17 @@ interface Data {
 	[key: string]: string | object | undefined;
 }
 
-// import news store
-import { newsContent } from "$logic/news.svelte";
-
 // import YAML
 import YAML from "yaml";
 
 // import raw data
-import { default as dataFooterRaw } from "$data/footer.yaml?raw";
+import { default as footerDataRawYAML } from "$data/footer.yaml?raw";
+
+// import news data
+import { newsContent } from "$logic/news.svelte";
 
 // parse raw data
-const footerData = YAML.parse(dataFooterRaw);
+const footerDataRaw = YAML.parse(footerDataRawYAML);
 
 export function createFooter() {
 	// constants
@@ -33,7 +33,15 @@ export function createFooter() {
 		"news-stories-data",
 	];
 
-	let news = newsContent.footerNews;
+	let data = $state(footerDataRaw);
+	let mergedData = $derived({
+		...data,
+		"news-stories-data": newsContent.footerNews,
+	});
+
+	function buildAttributes(data: Data) {
+		return attributes.map((att) => buildAttribute(att, data)).join(", ");
+	}
 
 	function buildAttribute(att: string, data: Data) {
 		if (data[att] && typeof data[att] === "object") {
@@ -43,17 +51,6 @@ export function createFooter() {
 		}
 	}
 
-	function buildAttributes(data: Data) {
-		return attributes.map((att) => buildAttribute(att, data)).join(", ");
-	}
-
-	function mergeData() {
-		return { ...footerData, "news-stories-data": news };
-	}
-
-	let data = $state(mergeData());
-	let component = $derived(`<${name} ${buildAttributes(data)}></${name}>`);
-
 	return {
 		get attributes() {
 			return attributes;
@@ -62,10 +59,16 @@ export function createFooter() {
 			return data;
 		},
 		get component() {
-			return component;
+			return `<${name} ${buildAttributes(mergedData)}></${name}>`;
 		},
 		get url() {
 			return url;
+		},
+		get footerWC() {
+			return {
+				component: this.component,
+				url: this.url,
+			};
 		},
 	};
 }
