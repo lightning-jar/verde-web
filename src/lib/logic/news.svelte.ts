@@ -21,7 +21,7 @@ export function createNews() {
 			return articles.slice(0, 3)?.map((news: Link) => {
 				return {
 					label: news.headline,
-					url: news.slug,
+					url: `/news/${news.slug}`,
 				};
 			});
 		},
