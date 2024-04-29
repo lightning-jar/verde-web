@@ -1,24 +1,16 @@
-interface Data {
-	[key: string]: string | object | undefined;
-}
+import { fetchContactPage } from "$lib/fetch/fetchContactPage.svelte";
 
-// import YAML
-import YAML from "yaml";
+console.log("fetching contact page content");
+const contactPageData = (await fetchContactPage(true)) as ContactPageContent;
 
-// import raw data
-import { default as contactPageDataRaw } from "$data/contactPage.yaml?raw";
-
-// parse raw data
-const headerData = YAML.parse(contactPageDataRaw);
-
-export function createContactPage() {
-	let data = $state(headerData);
+export function createContact() {
+	let data = $state(contactPageData);
 
 	return {
-		get data() {
+		get page() {
 			return data;
 		},
 	};
 }
 
-export const contactPage = createContactPage();
+export const contactPageContent = createContact();

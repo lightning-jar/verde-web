@@ -1,4 +1,4 @@
-import { fetchHomePage } from "$lib/fetch/fetchHome.svelte";
+import { fetchHomePage } from "$lib/fetch/fetchHomePage.svelte";
 
 console.log("fetching home page content");
 const homePageData = (await fetchHomePage(true)) as HomePageContent;

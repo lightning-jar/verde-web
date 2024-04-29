@@ -49,7 +49,7 @@ Here's some documentation for this component.
 				rel="canonical")
 
 		//- plausible analytics
-		+if('!data.dev && meta?.plausibleAnalytics')
+		+if('!data.dev && meta?.analyticsOn')
 			script(
 				data-domain="verdeclimatesolutions.com",
 				defer,
