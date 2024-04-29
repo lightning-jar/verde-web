@@ -10,6 +10,7 @@ dictionaries: []
 enableCompoundWords: enable
 words:
   - additionality
+  - callout
   - cloudinary
   - Coerver
   - deslugify
@@ -23,8 +24,10 @@ words:
   - Segoe
   - skinnypug
   - stylesheet
+  - superheading
   - tailwindcss
   - Verra
+  - webp
   - wordmark
 import: []
 ignoreWords:

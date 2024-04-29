@@ -7,12 +7,15 @@ Here's some documentation for this component.
 	// components
 	import CTABlock from "$atoms/CTABlock.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
-	import WidgetTitle from "$atoms/WidgetTitle.svelte";
-	import WidgetToutsGrid from "$components/molecules/WidgetToutsGrid.svelte";
+	import WidgetHeading from "$atoms/WidgetHeading.svelte";
+	import WidgetToutsGrid from "$components/molecules/WidgetCardsGrid.svelte";
 	import WidgetSubtitle from "$atoms/WidgetSubtitle.svelte";
 
+	// util
+	import slugify from "$utils/slugify";
+
 	// props
-	let { solution } = $props();
+	let { solution }: { solution: SolutionWidgetContent } = $props();
 </script>
 
 <template lang="pug">
@@ -33,7 +36,7 @@ Here's some documentation for this component.
 			md:py-16
 			md:min-h-[600px]
 			lg:py-20`,
-		id!="{ solution?.id ? solution.id : null }")
+		id!="{ solution?.heading ? slugify(solution.heading) : null }")
 		//- image background
 		+if('solution?.background?.image?.url')
 			img(
@@ -72,9 +75,10 @@ Here's some documentation for this component.
 					w-full
 					lg:place-items-start
 					lg:text-left`)
-				WidgetTitle { solution?.title ? solution.title : "" }
-				+if('solution?.subtitle')
-					WidgetSubtitle { solution.subtitle }
+				+if('solution?.heading')
+					WidgetHeading { solution?.heading }
+				+if('solution?.subheading')
+					WidgetSubtitle { solution.subheading }
 
 			//- text container
 			div(
@@ -89,21 +93,24 @@ Here's some documentation for this component.
 					lg:place-items-start
 					xl:mb-4`)
 				//- text
-				WidgetText(
-					classes="border-t py-8 lg:pt-6 lg:pr-8",
-					textContent!="{ solution.bodyText }")
+				+if('solution.text?.html')
+					WidgetText(
+						classes="border-t py-8 lg:pt-6 lg:pr-8",
+						htmlContent!="{ solution.text.html }")
 
 				//- cta
 				+if('solution.cta')
 					+const('cta = solution.cta')
 					CTABlock(
 						classes!="{ cta?.classes ? cta.classes : '' }",
-						bodyText!="{ cta?.bodyText ? cta.bodyText : '' }",
-						headingText!="{ cta?.headingText ? cta.headingText : '' }",
+						heading!="{ cta?.heading ? cta.heading : '' }",
 						link!="{ cta?.link?.url ? cta.link : '' }",
-						styles!="{ cta?.styles ? cta.styles : '' }")
+						styles!="{ cta?.styles ? cta.styles : '' }",
+						text!="{ cta?.text ? cta.text : '' }")
 
 			//- Benefits Grid
-			WidgetToutsGrid(
-				toutsGrid!="{ solution.cardsGrid }")
-				|</template>
+			+if('solution.cards[0]')
+				WidgetToutsGrid(
+					cards!="{ solution.cards }")
+
+	|</template>

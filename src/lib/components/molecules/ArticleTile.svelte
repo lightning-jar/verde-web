@@ -99,7 +99,7 @@ Here's some documentation for this component.
 
 		//- link
 		+if('link && link.url')
-			.h-full.flex-col.self-stretch.px-6.pb-4
+			.h-full.flex-col.self-stretch.px-6.pb-4.mt-4
 				PrimaryActionLink(
 					classes="z-10 max-w-fit px-6 {linkClasses}",
 					label!="{ link?.label ?? 'Read Story' }",

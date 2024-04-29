@@ -23,7 +23,8 @@ export const content = {
 		component: footerContent.component ?? "",
 		url: footerContent.url ?? "",
 	},
-	home: homeContent.data ?? {},
+	// home: homeContent.data ?? {},
+	home: homeContent.page ?? {},
 	news:
 		{
 			articles: newsContent.articles,

@@ -7,7 +7,7 @@ Contact Page
 	import ContactForm from "$molecules/ContactForm.svelte";
 	import PageContainer from "$molecules/PageContainer.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
-	import WidgetTitle from "$atoms/WidgetTitle.svelte";
+	import WidgetTitle from "$atoms/WidgetHeading.svelte";
 
 	let { data } = $props();
 </script>

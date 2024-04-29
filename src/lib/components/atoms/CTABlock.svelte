@@ -9,14 +9,14 @@ Here's some documentation for this component.
 
 	interface Props {
 		[key: string]: unknown;
-		bodyText: string;
+		text: string;
 		classes: string;
-		headingText: string;
+		heading: string;
 		link: Link;
 		styles: string;
 	}
 	// props
-	let { bodyText, classes, headingText, link, styles }: Props = $props();
+	let { text, classes, heading, link, styles }: Props = $props();
 </script>
 
 <template lang="pug">
@@ -73,7 +73,7 @@ Here's some documentation for this component.
 					max-w-xs
 					mb-2
 					text-18
-					text-slimy-300`) { headingText }
+					text-slimy-300`) { heading }
 
 			//- text
 			p(
@@ -82,7 +82,7 @@ Here's some documentation for this component.
 					mb-8
 					opacity-90
 					text-[0.9em]
-					lg:mb-6`) { bodyText }
+					lg:mb-6`) { text }
 
 			//- link
 			+if('link?.url')

@@ -1,18 +1,14 @@
-// import YAML
-import YAML from "yaml";
+import { fetchHomePage } from "$lib/fetch/fetchHome.svelte";
 
-// import raw data
-import { default as homeDataRaw } from "$data/home.yaml?raw";
-
-// parse raw data
-const homeData = YAML.parse(homeDataRaw) as HomeContent;
+console.log("fetching home page content");
+const homePageData = (await fetchHomePage(true)) as HomePageContent;
 
 export function createHome() {
-	let dataRaw = $state(homeData);
+	let data = $state(homePageData);
 
 	return {
-		get data() {
-			return dataRaw;
+		get page() {
+			return data;
 		},
 	};
 }

@@ -4,11 +4,11 @@ Here's some documentation for this component.
 -->
 
 <script lang="ts">
-	import Billboard from "$organisms/HomeBillboard.svelte";
-	import Blog from "$organisms/HomeBlog.svelte";
+	import Billboard from "$components/molecules/Billboard.svelte";
+	import Blog from "$components/molecules/Blog.svelte";
 	import Resources from "$components/molecules/Resources.svelte";
 	import Solution from "$components/molecules/Solution.svelte";
-	import Values from "$molecules/Values.svelte";
+	import Messaging from "$components/molecules/Messaging.svelte";
 
 	let { data } = $props();
 
@@ -26,9 +26,9 @@ Here's some documentation for this component.
 			solution!="{ solution }")
 
 	//- Values Messaging
-	+if('data.values')
-		Values(
-			values!="{ data.values }")
+	+each('data.messaging as widget')
+		Messaging(
+			messaging!="{ widget }")
 
 	+if('data.latestNews && data.resources')
 		Resources(

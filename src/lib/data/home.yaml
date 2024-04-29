@@ -1,156 +1,159 @@
 # home page content
 ---
 billboard:
-  headline: "Meet Your Climate Commitments"
+  background:
+    image:
+      url: "/images/billboard-mobile-placeholder.webp"
+    iframe:
+      url: "https://player.vimeo.com/video/826306957?autoplay=1&background=1&muted=1#t=1.8s"
+      title: "forest flyover video"
+    overlay:
+      styles: "mix-blend-mode:darken; background-image: linear-gradient(to bottom, rgb(1,29,80), rgb(1 29 80 / 0.6), rgb(1 29 80 / 0.4))"
+  heading: "Meet Your Climate Commitments"
   text: >-
     We help you take climate action to meet your corporate sustainability goals through carbon inventory management leveraging high quality carbon credits.
   cards:
-    - category: Carbon Credits
-      heading: Take Action
+    - heading: Take Action
       text: >-
         Get help sourcing high quality credits and other offsets that meet your carbon-reduction goals
       link:
-        label: Learn More
+        label: Find Carbon Credits
+        title: Learn more about purchasing carbon credits
         url: "/#purchasing-carbon-credits"
-      mobile:
-        heading: ""
-        text: "Get high quality credits & other offsets that meet your carbon-reduction goals"
-        linkLabel: "Find Carbon Credits"
-    - category: "Project Developers"
-      heading: Get Started
+    - heading: Project Developers
       text: >-
         Turn your renewable energy, carbon sequestration, or other qualified projects into income via carbon credits.
       link:
-        label: Learn More
+        label: Market Carbon Credits
+        title: Learn more about marketing carbon credits
         url: "/#marketing-carbon-credits"
-      mobile:
-        heading: "Project Owners"
-        text: >-
-          Turn your renewable energy, sequestration, or other project into carbon credits.
-        linkLabel: Create Carbon Credits
 solutions:
-  - background:
+  - heading: Purchasing Carbon Credits
+    subheading: for Organizations & Businesses
+    background:
       image:
         url: https://res.cloudinary.com/dn0pqjjbq/image/upload/e_blur:107,f_auto,q_auto/v1683923677/photo-1421789665209-c9b2a435e3dc_d1smc0.webp
       overlay:
         styles: "background-color:rgba(37, 70, 125, .6); mix-blend-mode:multiply;"
-    cardsGrid:
-      cardStyles: "backdrop-filter: blur(16px); background-color: rgba(255, 255, 255, .15); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
-      content:
-        - headingText: Available Supply
-          bodyText: A reliable source of verified carbon credits
-          icon:
-            url: "/icons/leaves.svg"
-        - headingText: Quality Projects
-          bodyText: Access to a diverse portfolio of high-quality carbon credit projects
-          icon:
-            url: "/icons/eco-energy.svg"
-        - headingText: Expert Guidance
-          bodyText: Expert guidance and support throughout the investment process
-          icon:
-            url: "/icons/grow.svg"
-        - headingText: Meaningful Impact
-          bodyText: A measurable & meaningful impact on carbon emissions"
-          icon:
-            url: "/icons/earth.svg"
+    cards:
+      - heading: Available Supply
+        text: A reliable source of verified carbon credits
+        image:
+          url: "/icons/leaves.svg"
+        styles: "backdrop-filter: blur(16px); background-color: rgba(255, 255, 255, .15); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
+      - heading: Quality Projects
+        text: Access to a diverse portfolio of high-quality carbon credit projects
+        image:
+          url: "/icons/eco-energy.svg"
+        styles: "backdrop-filter: blur(16px); background-color: rgba(255, 255, 255, .15); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
+      - heading: Expert Guidance
+        text: Expert guidance and support throughout the investment process
+        image:
+          url: "/icons/grow.svg"
+        styles: "backdrop-filter: blur(16px); background-color: rgba(255, 255, 255, .15); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
+      - heading: Meaningful Impact
+        text: A measurable & meaningful impact on carbon emissions"
+        image:
+          url: "/icons/earth.svg"
+        styles: "backdrop-filter: blur(16px); background-color: rgba(255, 255, 255, .15); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
     cta:
-      headingText: Ready to offset your carbon footprint and work towards carbon neutrality?
-      bodyText: Contact Verde today to learn how we can help you achieve your sustainability goals.
+      heading: Ready to offset your carbon footprint and work towards carbon neutrality?
+      text: Contact Verde today to learn how we can help you achieve your sustainability goals.
       link:
         label: Contact Us
         title: "get in touch"
         url: /contact
       styles: "backdrop-filter: blur(12px); background-color: rgba(30, 36, 39, .40); border: solid 1px rgba(245 245, 245, 0.6)"
-    id: purchasing-carbon-credits
-    name: Carbon Credits
-    subtitle: for Organizations & Businesses
-    title: Purchasing Carbon Credits
-    bodyText:
-      - At Verde, we support projects that deliver high-integrity carbon credits and help facilitate the purchase of those credits for institutional clients and organizations.
-      - We are committed to transparency and rigor in all our investments. Our team of experts conducts extensive research and due diligence to identify the most impactful and trustworthy carbon credit projects. We work closely with project developers to ensure that their projects meet our high standards for <i>additionality</i>, <i>permanence</i>, and <i>credibility</i>
-  - background:
+    text:
+      html: >-
+        <p>At Verde, we support projects that deliver high-integrity carbon credits and help facilitate the purchase of those credits for institutional clients and organizations.</p><p>We are committed to transparency and rigor in all our investments. Our team of experts conducts extensive research and due diligence to identify the most impactful and trustworthy carbon credit projects. We work closely with project developers to ensure that their projects meet our high standards for <i>additionality</i>, <i>permanence</i>, and <i>credibility</i></p>
+  - heading: Marketing Carbon Credits
+    subheading: for Project Developers
+    background:
       image:
         url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_auto/v1685113255/misty-mountains_qxknks.webp
       overlay:
         styles: "background-color:rgba(0, 0, 38, .75); mix-blend-mode:multiply;"
-    cardsGrid:
-      cardStyles: "backdrop-filter: blur(1px); background-image: linear-gradient(to left top, rgba(241, 245, 249, 0.1), rgba(241, 245, 249, 0.05)); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
-      content:
-        - headingText: Customized Solutions
-          bodyText: We work closely with project owners to develop tailored solutions that meet their specific needs and goals.
-          icon:
-            url: "/icons/lightning.svg"
-        - headingText: Positive Impact
-          bodyText: Project owners can be confident that their projects are helping to mitigate the effects of climate change.
-          icon:
-            url: "/icons/earth.svg"
-        - headingText: Risk Mitigation
-          bodyText: Our expert analysis can help ensure that projects meet the standards established by relevant certification bodies.
-          icon:
-            url: "/icons/umbrella.svg"
-        - headingText: Access to Markets
-          bodyText: We have deep relationships with buyers around the world, providing project owners with access to a diverse range of markets and pricing options.
-          icon:
-            url: "/icons/key.svg"
+    cards:
+      - heading: Customized Solutions
+        text: We work closely with project owners to develop tailored solutions that meet their specific needs and goals.
+        image:
+          url: "/icons/lightning.svg"
+        styles: "backdrop-filter: blur(1px); background-image: linear-gradient(to left top, rgba(241, 245, 249, 0.1), rgba(241, 245, 249, 0.05)); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
+      - heading: Positive Impact
+        text: Project owners can be confident that their projects are helping to mitigate the effects of climate change.
+        image:
+          url: "/icons/earth.svg"
+        styles: "backdrop-filter: blur(1px); background-image: linear-gradient(to left top, rgba(241, 245, 249, 0.1), rgba(241, 245, 249, 0.05)); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
+      - heading: Risk Mitigation
+        text: Our expert analysis can help ensure that projects meet the standards established by relevant certification bodies.
+        image:
+          url: "/icons/umbrella.svg"
+        styles: "backdrop-filter: blur(1px); background-image: linear-gradient(to left top, rgba(241, 245, 249, 0.1), rgba(241, 245, 249, 0.05)); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
+      - heading: Access to Markets
+        text: We have deep relationships with buyers around the world, providing project owners with access to a diverse range of markets and pricing options.
+        image:
+          url: "/icons/key.svg"
+        styles: "backdrop-filter: blur(1px); background-image: linear-gradient(to left top, rgba(241, 245, 249, 0.1), rgba(241, 245, 249, 0.05)); border: none; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);"
     cta:
-      headingText: Ready to offset your carbon footprint and work towards carbon neutrality?
-      bodyText: Contact Verde today to learn how we can help you achieve your sustainability goals.
+      heading: Ready to offset your carbon footprint and work towards carbon neutrality?
+      text: Contact Verde today to learn how we can help you achieve your sustainability goals.
       link:
         label: Contact Us
         title: "get in touch"
         url: /contact
       styles: "backdrop-filter: blur(12px); background-color: transparent; border: solid 1px rgba(245 245, 245, 0.6)"
-    id: marketing-carbon-credits
-    name: Marketing Credits
-    subtitle: for Project Developers
-    title: Marketing Carbon Credits
-    bodyText:
-      - As a project developer, you play a critical role in the fight against climate change. By partnering with Verde Climate Solutions, you can leverage our network and experience to market your high-quality carbon credits and make a real impact.
-      - When you work with Verde, you gain access to a team of experts with deep experience in carbon credit project development, verification, and marketing.
-values:
-  background:
-    image:
-      url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_auto:good/v1685113971/sea-turtle_txcjbu.webp
-    video:
-      url: "/videos/sea-turtle.mp4"
-      type: video/mp4
-  callOut: >-
-    Verde is committed to making a positive impact on our planet catalyzing carbon offset projects to deliver real, measurable results. Our expertise in the carbon credit creation, validation, and marketing process ensures that your project will have the greatest possible impact.
-  messagingBlocks:
-    - headingText: Quality
-      bodyText: >-
-        Quality is at the heart of what we do at Verde. We rigorously analyze third-party verification and validation to ensure that your carbon credits are of the highest quality. Working with us means that your organization can be confident that your carbon credits are credible and effective in the fight against climate change.
-    - headingText: Additionality
-      bodyText: >-
-        Additionality is key to creating carbon credits that truly make a difference in the fight against climate change. At Verde, we prioritize projects that go beyond business as usual to truly reduce greenhouse gas emissions. By working with us, your organization can be confident that efforts to reduce emissions will have a measurable impact.
-    - headingText: Permanence
-      bodyText: >-
-        When it comes to carbon credits, permanence is crucial. That's why we focus on projects that offer long-term, verifiable carbon sequestration or avoidance. With Verde, enterprises can rest assured that their carbon credits will be backed by sustainable, long-lasting emissions reductions.
-  title: Unlocking the Full Potential of Carbon Markets with Verde
-  id: values
+    text:
+      html: >-
+        <p>As a project developer, you play a critical role in the fight against climate change. By partnering with Verde Climate Solutions, you can leverage our network and experience to market your high-quality carbon credits and make a real impact.</p><p>When you work with Verde, you gain access to a team of experts with deep experience in carbon credit project development, verification, and marketing.</p>
+messaging:
+  - name: Values
+    heading: Unlocking the Full Potential of Carbon Markets with Verde
+    background:
+      image:
+        url: https://res.cloudinary.com/dn0pqjjbq/image/upload/f_auto,q_auto:good/v1685113971/sea-turtle_txcjbu.webp
+      video:
+        url: "/videos/sea-turtle.mp4"
+        type: video/mp4
+    callout: >-
+      Verde is committed to making a positive impact on our planet catalyzing carbon offset projects to deliver real, measurable results. Our expertise in the carbon credit creation, validation, and marketing process ensures that your project will have the greatest possible impact.
+    cards:
+      - heading: Quality
+        text: >-
+          Quality is at the heart of what we do at Verde. We rigorously analyze third-party verification and validation to ensure that your carbon credits are of the highest quality. Working with us means that your organization can be confident that your carbon credits are credible and effective in the fight against climate change.
+      - heading: Additionality
+        text: >-
+          Additionality is key to creating carbon credits that truly make a difference in the fight against climate change. At Verde, we prioritize projects that go beyond business as usual to truly reduce greenhouse gas emissions. By working with us, your organization can be confident that efforts to reduce emissions will have a measurable impact.
+      - heading: Permanence
+        text: >-
+          When it comes to carbon credits, permanence is crucial. That's why we focus on projects that offer long-term, verifiable carbon sequestration or avoidance. With Verde, enterprises can rest assured that their carbon credits will be backed by sustainable, long-lasting emissions reductions.
 resources:
-  title: News & Resources
-  subtitle: Recent news from around the industry on carbon credits, carbon reduction and related topics
-  ctas:
+  heading: News & Resources
+  subheading: Recent news from around the industry on carbon credits, carbon reduction and related topics
+  links:
     - label: Blog
+      title: go to Blog
       url: "/blog"
     - label: Contact
+      title: send us a message
       url: "/contact"
     - label: Glossary
+      title: go to glossary
       url: "/glossary"
-    - label: News
+    - label: More News
+      title: browse all news stories
       url: "/news"
-  link:
-    label: All News
-    title: browse all news stories
-    url: /news
-
 blog:
-  title: Blog
-  subtitle: Thoughts and insights about carbon offset projects, carbon credits, and carbon reduction from the experts at Verde.
+  heading: Blog
+  subheading: Thoughts and insights about carbon offset projects, carbon credits, and carbon reduction from the experts at Verde.
+  link:
+    url: /blog
+    label: Browse all blog articles
+    title: go to blog page
+
 meta:
-  title: Verde | Meet Your Climate Commitments
-  shortTitle: Verde Home
+  heading: Verde | Meet Your Climate Commitments
+  shortHeading: Verde Home
   description: >-
     Verde Climate Solutions procures carbon credits from high quality projects enabling organizations to meet their sustainability goals.
   keywords:

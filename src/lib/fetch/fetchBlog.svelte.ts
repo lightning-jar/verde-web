@@ -27,8 +27,7 @@ export async function fetchBlogPage(building: boolean) {
 		const blogPageData: { articlesPages: ArticlesPage[] } =
 			await hygraphHighSpeed.request(blogPageQuery);
 		const blogPage = blogPageData.articlesPages?.[0];
-		const yaml = YAML.stringify(blogPage);
-		console.log(yaml);
+
 		console.log("using fetched data for blog");
 		return blogPage;
 	} catch (error) {

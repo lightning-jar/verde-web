@@ -8,10 +8,11 @@ Here's some documentation for this component.
 	interface Props {
 		classes: string;
 		textContent: string[];
+		htmlContent: string;
 	}
 
 	// props
-	let { classes = "", textContent = [] }: Props = $props();
+	let { classes = "", textContent = [], htmlContent = "" }: Props = $props();
 
 	// variables
 	let p: string;
@@ -34,6 +35,11 @@ Here's some documentation for this component.
 			p(
 				class="mb-4 last:mb-0")
 				+html('p')
+		//- html content
+		+if('htmlContent')
+			#widget-text(
+				class="mb-4")
+				+html('htmlContent')
 
 		slot
 	|</template>

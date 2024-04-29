@@ -11,25 +11,25 @@ props:
 	// prettier-disable
 	interface Props {
 		bodyClasses: string;
-		bodyText: string;
+		text: string;
 		headingClasses: string;
 		headingTag: string;
-		headingText: string;
-		icon: Image;
+		heading: string;
+		image: Image;
 		cardClasses: string;
-		cardStyles: string;
+		styles: string;
 	}
 
 	// props
 	let {
 		bodyClasses,
-		bodyText = "",
+		text = "",
 		headingClasses,
 		headingTag = "h3",
-		headingText = "",
-		icon,
+		heading = "",
+		image,
 		cardClasses,
-		cardStyles,
+		styles,
 	}: Props = $props();
 
 	const body_classes = `opacity-[85%] text-[1em] leading-normal ${bodyClasses}`;
@@ -40,7 +40,7 @@ props:
 <template lang="pug">
 	div(
 		class!="{ card_classes }",
-		style!="{ cardStyles ? cardStyles : null }")
+		style!="{ styles ? styles : null }")
 		//- image
 		img(
 			class=`
@@ -50,18 +50,18 @@ props:
 				mb-4
 				w-16
 				`,
-			alt!="{ icon?.alt ?? '' }",
+			alt!="{ image?.alt ?? '' }",
 			role="presentation",
-			src!="{ icon?.url ?? null }")
+			src!="{ image?.url ?? null }")
 
 		//- heading
-		+if('headingText')
+		+if('heading')
 			svelte:element(
 				class!="{ heading_classes }",
-				this!="{ headingTag }") { headingText }
+				this!="{ headingTag }") { heading }
 
 		//- text
 		p(
-			class!="{ body_classes }") { bodyText }
+			class!="{ body_classes }") { text }
 
 		|</template>

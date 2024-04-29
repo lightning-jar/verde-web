@@ -12,10 +12,12 @@
 }
 
 @layer components {
-	#article-text P {
+	#article-text p,
+	#widget-text p {
 		opacity: 0.9;
 	}
-	#article-text p {
+	#article-text p,
+	#widget-text p {
 		margin-bottom: 1rem;
 	}
 	#article-text h2 {

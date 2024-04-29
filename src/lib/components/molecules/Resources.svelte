@@ -5,7 +5,7 @@ Here's some documentation for this component.
 
 <script lang="ts">
 	// components
-	import WidgetTitle from "$atoms/WidgetTitle.svelte";
+	import WidgetTitle from "$atoms/WidgetHeading.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import WidgetSubtitle from "$atoms/WidgetSubtitle.svelte";
 	import ArticleTile from "$molecules/ArticleTile.svelte";
@@ -14,23 +14,21 @@ Here's some documentation for this component.
 
 	const news = [];
 
-	let { latestNews, resources } = $props();
-	$inspect(latestNews);
-
-	// settings
-
-	// utils
+	let {
+		latestNews,
+		resources,
+	}: { latestNews: Article[]; resources: ResourcesWidgetContent } = $props();
 </script>
 
 <template lang="pug">
-	//- page container
-	div(
+	//- outer container
+	section(
 		class=`
 			h-auto
 			page-x-padding
-			pt-16
+			pt-20
 			pb-28`)
-		//- header container
+		//- inner container
 		div(
 			class=`
 				gap-y-4
@@ -46,10 +44,12 @@ Here's some documentation for this component.
 				containerClasses!="w-20 md:order-2 md:self-start md:justify-self-end")
 			div(
 				class="xl:order-1")
-				WidgetTitle(
-					classes!="sm:text-left") { resources.title }
-				WidgetText(
-					classes="px-8 sm:text-left sm:px-0 sm:max-w-md ") { resources.subtitle }
+				+if('resources?.heading')
+					WidgetTitle(
+						classes!="sm:text-left") { resources.heading }
+				+if('resources?.subheading')
+					WidgetText(
+						classes="px-8 sm:text-left sm:px-0 sm:max-w-md ") { resources.subheading }
 
 		//- Articles Widget
 		.grid.grid-cols-1.gap-8(
@@ -75,7 +75,7 @@ Here's some documentation for this component.
 					min-h-[400px]
 					sm:gap-8
 					lg:gap-8`)
-				+each('resources.ctas as link')
+				+each('resources.links as link')
 					a(
 						class!=`
 								bg-white/10
@@ -94,16 +94,7 @@ Here's some documentation for this component.
 								hover:bg-white/20
 								hover:underline
 								hover:opacity-100`,
-						href!="{ link?.url ?? null }") { link?.label ?? "" }
-			//- all news link
-			+if('resources?.link?.label')
-				a(
-					class=`
-						block
-						decoration-white/40
-						hover:text-slimy-200
-						underline
-						underline-offset-4`,
-					href="/news") { resources.link.label }
+						href!="{ link?.url ?? null }",
+						title!="{ link?.title ?? null }") { link?.label ?? "" }
 
 			|</template>

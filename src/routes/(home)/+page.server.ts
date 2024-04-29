@@ -7,7 +7,8 @@ export const load: PageServerLoad = async function ({ locals }) {
 	const { content } = locals;
 
 	// get home content
-	const { billboard, blog, meta, resources, solutions, values } = content.home;
+	const { billboard, blog, messaging, meta, resources, solutions } =
+		content.home;
 	const { latestBlog } = content.blog;
 	const { latestNews } = content.news;
 
@@ -16,9 +17,9 @@ export const load: PageServerLoad = async function ({ locals }) {
 		blog,
 		latestBlog,
 		latestNews,
+		messaging,
 		meta,
 		resources,
 		solutions,
-		values,
 	};
 };
