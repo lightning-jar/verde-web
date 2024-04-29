@@ -4,7 +4,7 @@ import { homeContent } from "$lib/logic/home.svelte";
 import { newsContent } from "$logic/news.svelte";
 import { blogContent } from "$logic/blog.svelte";
 import { contactPageContent } from "$logic/contactPage.svelte";
-import { glossary } from "$logic/glossary.svelte";
+import { glossaryPageContent } from "$logic/glossaryPage.svelte";
 
 export const content = {
 	blog:
@@ -14,7 +14,7 @@ export const content = {
 			latestBlog: blogContent.latestBlog ?? {},
 		} ?? {},
 	contactPage: contactPageContent.page ?? {},
-	glossary: { entries: glossary.entries, page: glossary.page } ?? {},
+	glossaryPage: glossaryPageContent.page ?? {},
 	headerWC: {
 		component: headerContent.component ?? "",
 		url: headerContent.url ?? "",
