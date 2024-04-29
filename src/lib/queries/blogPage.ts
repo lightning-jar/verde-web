@@ -14,7 +14,7 @@ query BlogPage {
       analyticsOn
       robotsFollow
     }
-    articles {
+    articles(orderBy: publishedAt_DESC) {
       author
       date
       excerpt
