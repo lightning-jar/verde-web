@@ -17,9 +17,7 @@ Contact Page
 		//- Header
 		.text-36.max-w-md.leading-snug.mb-6 { data.header.headline }
 		WidgetText(
-			classes="block !text-left pb-2")
-			| Whether you need help with carbon inventory management or the marketing of your project we’d love to hear from you. Please fill out the form below and we’ll get back to you as soon as possible.
-
+			classes="block !text-left pb-2") { data.header.text }
 		//- sec 1
 		.pt-8.mb-16.grid.gap-x-12.pb-24.pt-0.grid.grid-cols-1.place-content-start(
 			class="lg:grid-cols-2 border-neutral-100/40")
@@ -29,12 +27,12 @@ Contact Page
 			div
 				.grid(
 					class="lg:grid-cols-2")
-					+each('data.sidebar.cards as card')
+					+each('data.cards as card')
 						//- card
 						.rounded-md.px-6.pt-4.pb-6.text-neutral-100.h-auto(
 							class="bg-white/0 border border-white/40")
 							.uppercase.mb-2.text-14.tracking-widest { card.heading }
-							+each('card.content as line')
-								.opacity-90 { line }
+							.opacity-90
+								+html('card.text')
 
 	|</template>

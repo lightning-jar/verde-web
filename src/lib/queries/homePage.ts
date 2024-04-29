@@ -100,6 +100,13 @@ query HomePage {
         url
       }
     }
+    meta {
+      title
+      shortTitle
+      description
+      robotsFollow
+      analyticsOn
+    }
   }
 }
 `;

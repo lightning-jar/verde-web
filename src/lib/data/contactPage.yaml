@@ -1,22 +1,16 @@
+id: åclvl7infv3mj707k2l2kt860q
 header:
   headline: Contact Us
   text: >-
     Whether you need help with carbon inventory management or the marketing of your project we’d love to hear from you. Please fill out the form below and we’ll get back to you as soon as possible.
-sidebar:
-  cards:
-    - heading: Headquarters
-      content:
-        - Verde Climate Solutions
-          1885 Saint James Place Ste 1100
-          Houston, TX 77056
-
+cards:
+  - heading: Headquarters
+    text: >-
+      Verde Climate Solutions<br>1885 Saint James Place Ste&nbsp;1100<br>Houston, TX 77056
 meta:
   title: Verde | Contact Us
   shortTitle: Contact Us
   description: >-
     Get in touch with Verde Climate Solutions
-  keywords:
-    - Verde Climate Solutions
-    - Carbon Credits
   robotsFollow: true
-  plausibleAnalytics: true
+  analyticsOn: true

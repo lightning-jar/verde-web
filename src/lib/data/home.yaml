@@ -152,12 +152,12 @@ blog:
     title: go to blog page
 
 meta:
-  heading: Verde | Meet Your Climate Commitments
-  shortHeading: Verde Home
+  title: Verde | Meet Your Climate Commitments
+  shortTitle: Verde Home
   description: >-
     Verde Climate Solutions procures carbon credits from high quality projects enabling organizations to meet their sustainability goals.
   keywords:
     - Verde Climate Solutions
     - Carbon Credits
   robotsFollow: true
-  plausibleAnalytics: true
+  analyticsOn: true

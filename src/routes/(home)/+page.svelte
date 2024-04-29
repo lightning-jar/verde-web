@@ -11,8 +11,6 @@ Here's some documentation for this component.
 	import Messaging from "$components/molecules/Messaging.svelte";
 
 	let { data } = $props();
-
-	// $inspect(data.latestBlog);
 </script>
 
 <template lang="pug">
