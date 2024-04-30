@@ -5,15 +5,20 @@ ignorePaths:
   - pnpm-lock.yaml
   - pnpm-workspace.yaml
   - package.json
+ignoreRegExpList:
+  - /[a-z0-9]{25}/gi
 dictionaryDefinitions: []
 dictionaries: []
 enableCompoundWords: enable
 words:
   - additionality
+  - biofuels
   - callout
+  - CCUS
   - cloudinary
   - Coerver
   - deslugify
+  - Greenwashing
   - hygraph
   - iframe
   - Neue
@@ -21,13 +26,22 @@ words:
   - OKLCH
   - parentheticals
   - rgba
+  - RGGI
   - Roboto
+  - seagrass
   - Segoe
   - skinnypug
   - stylesheet
   - superheading
   - tailwindcss
+  - UNFCCC
   - Verra
+  - VREC
+  - VRECs
+  - VREM
+  - VRES
+  - VREU
+  - WBCSD
   - webp
   - wordmark
 import: []
