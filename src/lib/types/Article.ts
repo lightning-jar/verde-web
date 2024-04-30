@@ -1,12 +1,12 @@
 interface Article {
 	[key: string]: unknown;
 	author?: string | null;
-	date: Date;
+	date: string;
 	excerpt?: string | null;
 	headline: string;
-	id: string;
-	image?: Image;
-	imageAlt?: string;
+	id?: string | null;
+	image?: Image | null;
+	imageAlt?: string | null;
 	markup?: string;
 	source?: ArticleSource | null;
 	sourceArticleUrl?: string | null;
@@ -15,5 +15,5 @@ interface Article {
 	} | null;
 	slug: string;
 	tags: string[];
-	type: "news" | "blog";
+	type?: string | null;
 }
