@@ -34,8 +34,8 @@
 					+const('text = term + " " + definition')
 					+const('f = filter ? filter.toLowerCase() : ""')
 					+if('f && text && text.includes(f) || !f')
-						.mt-8.pt-8(
-							class="{(index == data.glossaryEntries.length - 1) ? '' : 'border-t'} border-neutral-100/30",
+						div(
+							class="border-t border-neutral-100/30 mt-8 pt-8",
 							id!="{ slugify(entry.term).replace(/\-$/,'') }")
 							div(
 								class="md:max-w-lg")

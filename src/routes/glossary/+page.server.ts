@@ -4,7 +4,8 @@ export const load: PageServerLoad = async function ({ locals }) {
 	const { content } = locals;
 
 	// get home content
-	const { glossaryEntries, header, meta } = content.glossaryPage;
+	const { header, meta } = content.glossaryPage as GlossaryPageContent;
+	const glossaryEntries = content.glossaryPage?.glossaryEntries ?? [];
 
 	return {
 		glossaryEntries,
