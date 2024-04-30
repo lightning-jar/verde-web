@@ -33,8 +33,8 @@ Here's some documentation for this component.
 				type="module")
 
 		//- title
-		+if('meta?.title')
-			title { meta.title }
+		+if('$page.data?.meta?.title')
+			title { $page.data.meta.title }
 
 		//- description
 		+if('meta?.description')
