@@ -27,7 +27,7 @@ export const content = {
 	home: homeContent.page ?? {},
 	news:
 		{
-			articles: newsContent.articles,
+			articles: newsContent?.articles ?? [],
 			page: newsContent.page,
 			latestNews: newsContent.latestNews,
 		} ?? {},
