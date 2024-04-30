@@ -37,9 +37,9 @@ Here's some documentation for this component.
 			title { $page.data.meta.title }
 
 		//- description
-		+if('meta?.description')
+		+if('$page.data.meta?.description')
 			meta(
-				content!="{ meta.description }",
+				content!="{ $page.data.meta.description }",
 				name="description")
 
 		//- canonical
@@ -49,14 +49,14 @@ Here's some documentation for this component.
 				rel="canonical")
 
 		//- plausible analytics
-		+if('!data.dev && meta?.analyticsOn')
+		+if('!data.dev && $page.data.meta?.analyticsOn')
 			script(
 				data-domain="verdeclimatesolutions.com",
 				defer,
 				src="https://plausible.io/js/script.js")
 
 		//- robots
-		+if('meta?.robotsFollow')
+		+if('$page.data.meta?.robotsFollow')
 			meta(
 				content="index, follow max-image-preview:large, max-snippet:-1, max-video-preview:-1 ",
 				name="robots")
