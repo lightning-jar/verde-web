@@ -13,10 +13,6 @@ query glossaryPages {
       analyticsOn
       robotsFollow
     }
-    glossaryEntries {
-      term
-      definition
-    }
   }
 }
 `;
