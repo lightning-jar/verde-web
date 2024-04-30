@@ -53,7 +53,7 @@ Here's some documentation for this component.
 			script(
 				data-domain="verdeclimatesolutions.com",
 				defer,
-				src="https://plausible.io/js/plausible.js")
+				src="https://plausible.io/js/script.js")
 
 		//- robots
 		+if('meta?.robotsFollow')
