@@ -6,7 +6,7 @@ const newsPageData = (await fetchNewsPage(true)) as ArticlesPage;
 export function createNews() {
 	let header = $state(newsPageData.header);
 	let meta = $state(newsPageData.meta);
-	let articles = $state(newsPageData.articles);
+	let articles = $state(newsPageData?.articles ?? []);
 
 	return {
 		get articles() {
