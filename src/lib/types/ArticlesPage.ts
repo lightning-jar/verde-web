@@ -1,5 +1,6 @@
 interface ArticlesPage {
+	[key: string]: unknown;
 	header: PageHeader;
 	meta: PageMeta;
-	articles: Article[];
+	articles?: Article[] | null;
 }

@@ -2,6 +2,6 @@
 interface ArticleSource {
 	[key: string]: unknown;
 	author?: string | null;
-	name: string;
-	url: string;
+	name?: string | null;
+	url?: string | null;
 }
