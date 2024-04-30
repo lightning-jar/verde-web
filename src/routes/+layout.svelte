@@ -13,65 +13,68 @@ Here's some documentation for this component.
 	// import child page data
 	import { page } from "$app/stores";
 
-	// unpack child page data
-	const meta = ($page.data?.meta as PageMeta) ?? {};
-
 	// catch data from +layout.server.ts
 	let { data } = $props() as { data: LayoutData };
+
+	const webComponents = [data.headerWC, data.footerWC];
 </script>
 
-<template lang="pug">
-	svelte:head
-		//- web component preloads
-		+each('[data.headerWC, data.footerWC] as wc')
-			link(
-				href!="{ wc.url }",
-				rel="modulepreload")
-			script(
-				async,
-				src!="{ wc.url }",
-				type="module")
+<svelte:head>
+	<!-- web components -->
+	{#each webComponents as wc}
+		<link
+			href="{wc.url}"
+			rel="modulepreload" />
+		<script
+			async
+			src="{wc.url}"
+			type="module"></script>
+	{/each}
+	{#if $page.data.meta.title}
+		<title>{$page.data.meta.title}</title>
+	{/if}
 
-		//- title
-		+if('$page.data?.meta?.title')
-			title { $page.data.meta.title }
+	<!-- description -->
+	{#if $page.data.meta.description}
+		<meta
+			content="{$page.data.meta.description}"
+			name="description" />
+	{/if}
 
-		//- description
-		+if('$page.data.meta?.description')
-			meta(
-				content!="{ $page.data.meta.description }",
-				name="description")
+	<!-- canonical -->
+	{#if data.siteDomain && data.pathname}
+		<link
+			href="https://{data.siteDomain}{data.pathname}"
+			rel="canonical" />
+	{/if}
 
-		//- canonical
-		+if('data?.siteDomain && data?.pathname')
-			link(
-				href!="https://{data.siteDomain}{data.pathname}",
-				rel="canonical")
+	<!-- analytics -->
+	{#if !data.dev && $page.data.meta?.analyticsOn}
+		<script
+			data-domain="verdeclimatesolutions.com"
+			defer
+			src="https://plausible.io/js/script.js"></script>
+	{/if}
 
-		//- plausible analytics
-		+if('!data.dev && $page.data.meta?.analyticsOn')
-			script(
-				data-domain="verdeclimatesolutions.com",
-				defer,
-				src="https://plausible.io/js/script.js")
+	<!-- robots -->
+	{#if !data.dev && $page.data.meta?.robotsFollow}
+		<meta
+			content="index, follow max-image-preview:large, max-snippet:-1, max-video-preview:-1 "
+			name="robots" />
+	{:else}
+		<meta
+			content="noindex, nofollow"
+			name="robots" />
+	{/if}
 
-		//- robots
-		+if('$page.data.meta?.robotsFollow')
-			meta(
-				content="index, follow max-image-preview:large, max-snippet:-1, max-video-preview:-1 ",
-				name="robots")
-			+else
-				meta(
-					content="noindex, nofollow",
-					name="robots")
-
-		//- zoom info tracker
-		+if('!data.dev')
-			script(
-				async,
-				id="zoominfo-tracker",
-				src="/zoomInfo.js")
-	|</template>
+	<!-- zoomInfo -->
+	{#if !data.dev}
+		<script
+			async
+			id="zoominfo-tracker"
+			src="/zoomInfo.js"></script>
+	{/if}
+</svelte:head>
 
 <div
 	class="grid grid-cols-1 justify-start min-h-screen place-items-start place-content-start grid-rows-[auto,1fr,auto] mx-auto text-white w-full">
