@@ -30,12 +30,12 @@ Here's some documentation for this component.
 			src="{wc.url}"
 			type="module"></script>
 	{/each}
-	{#if $page.data.meta.title}
+	{#if $page?.data?.meta?.title}
 		<title>{$page.data.meta.title}</title>
 	{/if}
 
 	<!-- description -->
-	{#if $page.data.meta.description}
+	{#if $page?.data?.meta?.description}
 		<meta
 			content="{$page.data.meta.description}"
 			name="description" />
@@ -49,7 +49,7 @@ Here's some documentation for this component.
 	{/if}
 
 	<!-- analytics -->
-	{#if !data.dev && $page.data.meta?.analyticsOn}
+	{#if !data.dev && $page?.data.meta?.analyticsOn}
 		<script
 			data-domain="verdeclimatesolutions.com"
 			defer
@@ -57,7 +57,7 @@ Here's some documentation for this component.
 	{/if}
 
 	<!-- robots -->
-	{#if !data.dev && $page.data.meta?.robotsFollow}
+	{#if !data.dev && $page?.data?.meta?.robotsFollow}
 		<meta
 			content="index, follow max-image-preview:large, max-snippet:-1, max-video-preview:-1 "
 			name="robots" />

@@ -45,6 +45,10 @@
   },
   "type": "module",
   "dependencies": {
+    "@sentry/sveltekit": "^7.112.2",
     "@vercel/kv": "^1.0.1"
-  }
+  },
+  "trustedDependencies": [
+    "@sentry/cli"
+  ]
 }

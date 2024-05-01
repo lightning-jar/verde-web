@@ -4,22 +4,11 @@ export const config = {
 	runtime: "nodejs20.x",
 };
 
+// import Sentry
+import * as Sentry from "@sentry/sveltekit";
+
 // svelte functions
 import { sequence } from "@sveltejs/kit/hooks";
-
-// // Sentry
-// import * as Sentry from "@sentry/sveltekit";
-// import { handleErrorWithSentry } from "@sentry/sveltekit";
-
-// // initialize sentry
-// Sentry.init({
-// 	dsn: "https://4a8d945bea35470285e30b0de3d5580a@o4505247956860928.ingest.sentry.io/4505561997246464",
-// 	// Performance Monitoring
-// 	tracesSampleRate: 0, // Capture 100% of the transactions. Adjust this value in production as necessary.
-// });
-
-// // handle errors with sentry
-// export const handleError = handleErrorWithSentry();
 
 // handle function
 import type { Handle } from "@sveltejs/kit";
@@ -31,11 +20,16 @@ import settings from "$collections/settings";
 import siteMeta from "$collections/siteMeta";
 import utils from "$collections/utils";
 
-export const handle: Handle =
-	// sentry
-	// Sentry.sentryHandle()
-	// null,
+Sentry.init({
+	dsn: "https://1b34710a44c60e438486a0a0c0db3209@o4505247956860928.ingest.us.sentry.io/4507181233274880",
+	tracesSampleRate: 1,
+});
 
+export const handle: Handle = sequence(
+	// sentry
+	Sentry.sentryHandle(),
+
+	// locals
 	async ({ event, resolve }) => {
 		// pass data to locals
 		event.locals = {
@@ -48,4 +42,8 @@ export const handle: Handle =
 
 		const response = await resolve(event);
 		return response;
-	};
+	},
+);
+
+// handle error
+export const handleError = Sentry.handleErrorWithSentry();
