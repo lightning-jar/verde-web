@@ -31,8 +31,6 @@ export const load: LayoutServerLoad = async function ({ url, locals }) {
 	// unpack content
 	const { headerWC, footerWC } = content;
 
-	// console.log("mfs", newsContent.footerNews);
-
 	return {
 		dev,
 		// domain,

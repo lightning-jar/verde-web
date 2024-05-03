@@ -14,5 +14,5 @@ query NewsPage {
       analyticsOn
       robotsFollow
     }
-  }`;
+  }}`;
 export default newsPageQuery;
