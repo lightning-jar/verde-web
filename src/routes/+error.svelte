@@ -4,7 +4,7 @@ Contact Page
 -->
 <script lang="ts">
 	// components
-	import PageContainer from "$molecules/PageContainer.svelte";
+	import PageContainer from "$atoms/PageContainer.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import WidgetTitle from "$atoms/WidgetHeading.svelte";
 

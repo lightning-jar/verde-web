@@ -4,8 +4,8 @@ Contact Page
 -->
 <script lang="ts">
 	// components
-	import ContactForm from "$molecules/ContactForm.svelte";
-	import PageContainer from "$molecules/PageContainer.svelte";
+	import ContactForm from "$molecules/ContactFormWidget.svelte";
+	import PageContainer from "$atoms/PageContainer.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import WidgetTitle from "$atoms/WidgetHeading.svelte";
 

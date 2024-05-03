@@ -5,10 +5,10 @@ Here's some documentation for this component.
 
 <script lang="ts">
 	import Billboard from "$components/molecules/Billboard.svelte";
-	import Blog from "$components/molecules/Blog.svelte";
-	import Resources from "$components/molecules/Resources.svelte";
-	import Solution from "$components/molecules/Solution.svelte";
-	import Messaging from "$components/molecules/Messaging.svelte";
+	import Blog from "$components/molecules/BlogWidget.svelte";
+	import Resources from "$components/molecules/ResourcesWidget.svelte";
+	import Solution from "$components/molecules/SolutionWidget.svelte";
+	import Messaging from "$components/molecules/MessagingWidget.svelte";
 
 	let { data } = $props();
 </script>

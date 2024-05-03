@@ -140,7 +140,7 @@ const config: Config = {
 					"system-ui",
 					"-apple-system",
 					"sans-serif",
-				]
+				],
 			},
 			fontSize: {
 				...fontSizePxClasses0to50,

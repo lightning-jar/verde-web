@@ -1,10 +1,9 @@
 // from eslint, basic recommended rules
 import js from "@eslint/js";
-import ts from "typescript-eslint";
 const eslintRecommendedRules = js.configs.recommended.rules;
 // from typescript-eslint, parser and plugin for typescript
-import tsParser from "typescript-eslint/parser";
-import tsPlugin from "/typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
 const tsRecommendedRules = tsPlugin.configs.recommended.rules;
 
 // from eslint-config-prettier, rules to override ESLint formatting rules that might conflict with Prettier
@@ -54,7 +53,7 @@ export default [
 			"@typescript-eslint/no-inferrable-types": "off",
 			"@typescript-eslint/no-explicit-any": "warn",
 			"no-inner-declarations": "off",
-			"no-undef": "warn",
+			"no-undef": "off",
 		},
 		ignores: [
 			"**/vite.config.js",

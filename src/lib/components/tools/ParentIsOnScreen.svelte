@@ -51,7 +51,8 @@ This sweet little component is used to tell if it's parent component is on scree
 
 	onMount(() => {
 		// identify parent element
-		parentElement = container && container.parentElement ? container.parentElement : null;
+		parentElement =
+			container && container.parentElement ? container.parentElement : null;
 		// create observer
 		let observer = new IntersectionObserver(callback, options);
 		// observe parent
@@ -62,6 +63,4 @@ This sweet little component is used to tell if it's parent component is on scree
 <template lang="pug">
 	.pointer-events-none.h-0.w-0(
 		bind:this!="{ container }",
-		data-tool="onScreenTest"
-	)
-</template>
+		data-tool="onScreenTest")</template>

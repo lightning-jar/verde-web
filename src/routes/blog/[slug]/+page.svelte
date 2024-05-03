@@ -4,7 +4,7 @@ Here's some documentation for this component.
 -->
 <script lang="ts">
 	// components
-	import PageContainer from "$molecules/PageContainer.svelte";
+	import PageContainer from "$atoms/PageContainer.svelte";
 
 	// types
 	import type { PageData } from "./$types.js";
@@ -72,8 +72,8 @@ Here's some documentation for this component.
 					p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
 
 					#article-text.text-18.leading-relaxed.mb-8(
-						class="md:text-[18px]") {  @html data.article?.text?.html  }
-
+						class="md:text-[18px]")
+						+html('data.article?.text?.html ?? ""')
 					//- read full article cta
 					+if('data.article?.sourceArticleUrl')
 						a(

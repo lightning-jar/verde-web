@@ -1,6 +1,6 @@
 <!--
 @component
-Widget tout component to nest inside WidgetToutGrid
+Widget tout component to nest inside WidgetCardGrid
 - heading is H3 tag by default
 - icon is 16x16
 - text is P tag

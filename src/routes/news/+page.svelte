@@ -6,7 +6,7 @@ Here's some documentation for this component.
 	// components
 	import ArticleGallery from "$molecules/ArticleGallery.svelte";
 	import ArticleTile from "$molecules/ArticleTile.svelte";
-	import PageContainer from "$molecules/PageContainer.svelte";
+	import PageContainer from "$atoms/PageContainer.svelte";
 	import PageHeader from "$atoms/PageHeader.svelte";
 	import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
 	import WidgetSubheading from "$atoms/WidgetSubheading.svelte";

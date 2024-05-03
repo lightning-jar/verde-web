@@ -11,7 +11,6 @@ Here's some documentation for this component.
 	import WidgetHeading from "$atoms/WidgetHeading.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import ParentIsOnScreen from "$tools/ParentIsOnScreen.svelte";
-	import type { Video } from "@playwright/test";
 
 	// utils
 	import { slugify } from "$utils/slugify";

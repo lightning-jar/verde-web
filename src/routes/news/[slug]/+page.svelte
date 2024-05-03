@@ -4,7 +4,7 @@ Here's some documentation for this component.
 -->
 <script lang="ts">
 	// components
-	import PageContainer from "$molecules/PageContainer.svelte";
+	import PageContainer from "$atoms/PageContainer.svelte";
 
 	// types
 	import type { PageData } from "./$types.js";
@@ -70,9 +70,9 @@ Here's some documentation for this component.
 					h1.text-19.font-semibold.mb-4.capitalize(
 						class="lg:text-24") { data.article?.headline }
 					p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
+					//- prettier-ignore
+					#article-text.text-18.leading-relaxed.mb-8(class="md:text-[18px]") {@html data.article?.text?.html?.substring(0,1200) ?? "" + "... " }
 
-					#article-text.text-18.leading-relaxed.mb-8(
-						class="md:text-[18px]") {  @html data.article?.text?.html.substring(0,1200) + '... '  }
 						i.opacity-80.text-16 ( article continues at { data.article?.source?.name ? data.article?.source?.name : "" } )
 
 					//- read full article cta
