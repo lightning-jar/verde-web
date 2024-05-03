@@ -28,5 +28,6 @@ Here's some documentation for this component.
 			articles!="{ data.articles }",
 			headlineClasses="font-semibold text-lg",
 			linkClasses="hover:bg-penn-750 hover:shadow-lg",
+			showSource!="{ false }",
 			tileBackgroundClasses="shadow-md bg-penn-700")
 	|</template>

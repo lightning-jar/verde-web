@@ -14,6 +14,8 @@ Here's some documentation for this component.
 		headlineClasses: string;
 		linkClasses: string;
 		tileBackgroundClasses: string;
+		showSource: boolean;
+		showDate: boolean;
 	}
 
 	let {
@@ -23,6 +25,8 @@ Here's some documentation for this component.
 		headlineClasses = "",
 		linkClasses = "",
 		tileBackgroundClasses,
+		showSource = true,
+		showDate = true,
 	}: Props = $props();
 
 	let limitedArticles = articles.slice(0, articleLimit);
@@ -48,10 +52,14 @@ Here's some documentation for this component.
 			.relative.w-full.h-full
 				ArticleTile(
 					backgroundClasses!="{ tileBackgroundClasses }",
+					date!="{ article?.date ?? '' }",
 					excerpt!="{ article?.excerpt ?? '' }",
 					headline!="{ article.headline }",
 					headlineClasses!="{ headlineClasses }",
 					image!="{ article.image }",
 					link!="{{url: articleUrl} }",
-					linkClasses!="{ linkClasses }")
+					linkClasses!="{ linkClasses }",
+					showDate!="{ showDate }",
+					showSource!="{ showSource }",
+					source!="{ article.source }")
 					|</template>
