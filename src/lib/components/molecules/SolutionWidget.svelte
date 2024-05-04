@@ -11,6 +11,9 @@ Here's some documentation for this component.
 	import WidgetToutsGrid from "$molecules/CardsGridWidget.svelte";
 	import WidgetSubtitle from "$atoms/WidgetSubtitle.svelte";
 
+	// utils
+	import { sluggo } from "$utils/sluggo";
+
 	// props
 	let { solution }: { solution: SolutionWidgetContent } = $props();
 </script>
@@ -33,7 +36,7 @@ Here's some documentation for this component.
 			md:py-16
 			md:min-h-[600px]
 			lg:py-20`,
-		id!="{ solution?.heading ? slugify(solution.heading) : null }")
+		id!="{ solution?.heading ? sluggo(solution.heading) : null }")
 		//- image background
 		+if('solution?.background?.image?.url')
 			img(

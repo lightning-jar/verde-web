@@ -12,6 +12,9 @@ Here's some documentation for this component.
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import ParentIsOnScreen from "$tools/ParentIsOnScreen.svelte";
 
+	// utils
+	import { sluggo } from "$utils/sluggo";
+
 	interface Props {
 		[key: string]: unknown;
 		isOnScreen: boolean;
@@ -38,7 +41,7 @@ Here's some documentation for this component.
 			md:min-h-[600px]
 			md:py-16
 			lg:py-20`,
-		id!="{ messaging?.name ? slugify(messaging.name) : messaging?.heading ? slugify(messaging.heading) : null }")
+		id!="{ messaging?.name ? sluggo(messaging.name) : messaging?.heading ? sluggo(messaging.heading) : null }")
 		//- is on screen
 		div(
 			class=`
