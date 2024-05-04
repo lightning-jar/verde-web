@@ -17,5 +17,5 @@
 // 	//integrations: [replayIntegration()],
 // });
 
-// If you have a custom error handler, pass it to `handleErrorWithSentry`
-//export const handleError = handleErrorWithSentry();
+// //If you have a custom error handler, pass it to `handleErrorWithSentry`
+// export const handleError = handleErrorWithSentry();
