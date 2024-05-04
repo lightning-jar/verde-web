@@ -5,7 +5,8 @@ export function slugify(string: string) {
 		.replace(/'/g, "")
 		.replace(/\W/g, "-")
 		.replace(/--*/gi, "-")
-		.toLowerCase();
+		.toLowerCase()
+		.replace(/-$/, "");
 	return slugified;
 }
 export default slugify;
