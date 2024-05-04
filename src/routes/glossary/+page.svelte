@@ -5,6 +5,10 @@
 	//- stores
 	let { data }: { data: GlossaryPageContent } = $props();
 	let filter = $state("");
+
+	function genId(str: string) {
+		return slugify(str) ?? "";
+	}
 </script>
 
 <template lang="pug">
@@ -35,10 +39,10 @@
 					+const('f = filter ? filter.toLowerCase() : ""')
 					+if('f && text && text.includes(f) || !f')
 						div(
-							class="border-t border-neutral-100/30 mt-8 pt-8",
-							id!="{ slugify(entry.term).replace(/\-$/,'') }")
+							class="border-t border-neutral-100/30 mt-8 pt-8")
 							div(
-								class="md:max-w-lg")
+								class="md:max-w-lg",
+								id!="{ genId(entry.term) }")
 								h3.mb-1.text-17(
 									class="font-medium") { entry.term }
 								p.text-15(
