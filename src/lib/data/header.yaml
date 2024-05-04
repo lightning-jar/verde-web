@@ -18,7 +18,7 @@ menus-data:
       url: /#purchasing-carbon-credits
   - link:
       label: Marketing Credits
-      url: /#marketing-carbon-credit
+      url: /#marketing-carbon-credits
   - link:
       label: ""
       url: ""
