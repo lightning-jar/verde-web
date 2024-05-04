@@ -12,9 +12,6 @@ Here's some documentation for this component.
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import ParentIsOnScreen from "$tools/ParentIsOnScreen.svelte";
 
-	// utils
-	import { slugify } from "$utils/slugify";
-
 	interface Props {
 		[key: string]: unknown;
 		isOnScreen: boolean;

@@ -8,11 +8,8 @@ Here's some documentation for this component.
 	import CTABlock from "$atoms/CTABlock.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
 	import WidgetHeading from "$atoms/WidgetHeading.svelte";
-	import WidgetToutsGrid from "$components/molecules/CardsGridWidget.svelte";
+	import WidgetToutsGrid from "$molecules/CardsGridWidget.svelte";
 	import WidgetSubtitle from "$atoms/WidgetSubtitle.svelte";
-
-	// util
-	import slugify from "$utils/slugify";
 
 	// props
 	let { solution }: { solution: SolutionWidgetContent } = $props();

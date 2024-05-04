@@ -1,7 +1,7 @@
 import { get } from "svelte/store";
 import { redirect } from "@sveltejs/kit";
 import { error } from "@sveltejs/kit";
-import slugify from "$utils/slugify";
+import sluggo from "$utils/sluggo";
 import deslugify from "$utils/deslugify";
 import titleCase from "$utils/titleCase";
 export const utils = {
@@ -9,7 +9,7 @@ export const utils = {
 	get,
 	redirect,
 	error,
-	slugify,
+	sluggo,
 	titleCase,
 };
 export default utils;
