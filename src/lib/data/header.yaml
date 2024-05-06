@@ -20,6 +20,9 @@ menus-data:
       label: Marketing Credits
       url: /#marketing-carbon-credits
   - link:
-      label: ""
-      url: ""
+      label: "News"
+      url: "/news"
+  - link:
+      label: "Blog"
+      url: "/blog"
 stylesheet: "#brand-image { width:110px; } #button-link { transition-property: color, background-color; transition-duration: 0.1s; } #button-link:hover { color:#09A423; border-color: #09A423; } .menu-heading-link:hover { color: #09A423; } @media(min-width:768px) { #main-nav { transform:translateY(.5em) }}"
