@@ -101,7 +101,7 @@ Here's some documentation for this component.
 			//- headline
 			+if('headline')
 				a.line-clamp-2(
-					class!="hover:underline underline-offset-4 decoration-current/60 { headlineClasses }",
+					class!="hover:underline underline-offset-4 decoration-current/60 { headlineClasses } {excerpt ? '' : 'mb-6' }",
 					href!="{ link?.url ?? null }",
 					title!="{ headline }") { headline }
 
