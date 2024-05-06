@@ -118,7 +118,7 @@ Here's some documentation for this component.
 				//- Title
 				+if('messaging.heading')
 					WidgetHeading(
-						classes!="!mb-8 w-full px-24 lg:px-0 lg:!mb-0") { messaging.heading }
+						classes!="!mb-8 w-full px-6sm:px-24 lg:px-0 lg:!mb-0") { messaging.heading }
 
 				//- CallOut
 				+if('messaging.callout')
