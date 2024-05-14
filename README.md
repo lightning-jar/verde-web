@@ -1,2 +1,2 @@
 # verde website
-- lorem
+- repository migrated to Lightning Jar account
