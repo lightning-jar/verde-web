@@ -8,6 +8,7 @@ Here's some documentation for this component.
 	import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
 	import WidgetSubheading from "$atoms/WidgetSubheading.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
+	import { parse } from "svelte/compiler";
 
 	interface Props {
 		backgroundClasses: string;
@@ -35,6 +36,12 @@ Here's some documentation for this component.
 		showDate = true,
 		source,
 	} = $props();
+
+	// functions
+	function formatDate(date: string): string {
+		let splitDate = date.split("-");
+		return `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`;
+	}
 </script>
 
 <template lang="pug">
@@ -85,7 +92,7 @@ Here's some documentation for this component.
 				.flex.mb-3.items-center
 					//- date
 					+if('date && showDate')
-						.opacity-70.tracking-wider.text-13 { new Date(date)?.toLocaleDateString() ?? "" }
+						.opacity-70.tracking-wider.text-13 { formatDate(date) ?? "" }
 					+if('date && showDate && source?.name && showSource')
 						.mx-2.opacity-20 /
 					//- source
