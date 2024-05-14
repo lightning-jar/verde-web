@@ -21,7 +21,7 @@ Here's some documentation for this component.
 	let {
 		articles,
 		articleFolder = "",
-		articleLimit = 20,
+		articleLimit = 240,
 		headlineClasses = "",
 		linkClasses = "",
 		tileBackgroundClasses,
