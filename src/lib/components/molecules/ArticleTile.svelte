@@ -8,7 +8,6 @@ Here's some documentation for this component.
 	import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
 	import WidgetSubheading from "$atoms/WidgetSubheading.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
-	import { parse } from "svelte/compiler";
 
 	interface Props {
 		backgroundClasses: string;
