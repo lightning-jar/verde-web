@@ -1,2 +1,2 @@
 # verde website
-- repository migrated to Lightning Jar account
+- auto-deploy test
