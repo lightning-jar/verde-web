@@ -1,2 +1,2 @@
 # verde website
-- auto-deploy test
+- deploy hook test
