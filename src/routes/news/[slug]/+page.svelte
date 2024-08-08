@@ -11,8 +11,6 @@ Here's some documentation for this component.
 
 	// data
 	let { data } = $props(); // data coming in from page.ts LoadEvent
-
-	// formatted markup
 </script>
 
 <template lang="pug">
@@ -72,7 +70,8 @@ Here's some documentation for this component.
 					p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
 					//- prettier-ignore
 					#article-text.text-18.leading-relaxed.mb-8(class="md:text-[18px]")
-						+html('data.article?.text?.html?.substring(0,1200) ?? "" + "... " ')
+						+html('data.onPageArticleText')
+						//- +html('data.article.text.html ?? "" + "... " ')
 
 						i.opacity-80.text-16 ( article continues at { data.article?.source?.name ? data.article?.source?.name : "" } )
 
