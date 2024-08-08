@@ -11,27 +11,6 @@ Here's some documentation for this component.
 
 	// data
 	let { data } = $props(); // data coming in from page.ts LoadEvent
-
-	// variables
-	let onPageArticleBody = truncateArticleText(data.article.text.html, 2);
-
-	// functions
-	function truncateArticleText(text: string, length: number): string {
-		let textArray: string[] = text.split("</p>");
-		if (textArray.length > length) {
-			textArray = textArray.slice(0, length + 1);
-			let lastSegment = textArray[length]; // This will always exist if textArray.length > length
-			if (lastSegment !== undefined) {
-				let trimmingIndex = lastSegment.lastIndexOf(".");
-				if (trimmingIndex > 0) {
-					textArray[length] = lastSegment.slice(0, trimmingIndex);
-				}
-			}
-			return textArray.join("</p>") + "...";
-		} else {
-			return text;
-		}
-	}
 </script>
 
 <template lang="pug">
@@ -91,7 +70,8 @@ Here's some documentation for this component.
 					p.mb-4.text-17.italic.opacity-80.text-neutral-100 { data?.article.excerpt }
 					//- prettier-ignore
 					#article-text.text-18.leading-relaxed.mb-8(class="md:text-[18px]")
-						+html('onPageArticleBody ?? "" + "... " ')
+						+html('data.onPageArticleText')
+						//- +html('data.article.text.html ?? "" + "... " ')
 
 						i.opacity-80.text-16 ( article continues at { data.article?.source?.name ? data.article?.source?.name : "" } )
 
