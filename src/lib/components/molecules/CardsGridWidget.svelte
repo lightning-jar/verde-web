@@ -8,6 +8,8 @@ props:
 -->
 
 <script lang="ts">
+	/* global Card */
+
 	//- components
 	import WidgetCard from "$atoms/WidgetCard.svelte";
 

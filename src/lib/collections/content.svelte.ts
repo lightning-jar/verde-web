@@ -7,12 +7,11 @@ import { contactPageContent } from "$logic/contactPage.svelte";
 import { glossaryPageContent } from "$logic/glossaryPage.svelte";
 
 export const content = {
-	blog:
-		{
-			articles: blogContent.articles ?? {},
-			page: blogContent.page ?? {},
-			latestBlog: blogContent.latestBlog ?? {},
-		} ?? {},
+	blog: {
+		articles: blogContent.articles ?? {},
+		page: blogContent.page ?? {},
+		latestBlog: blogContent.latestBlog ?? {},
+	},
 	contactPage: contactPageContent.page ?? {},
 	glossaryPage: glossaryPageContent.page ?? {},
 	headerWC: {
@@ -25,12 +24,11 @@ export const content = {
 	},
 	// home: homeContent.data ?? {},
 	home: homeContent.page ?? {},
-	news:
-		{
-			articles: newsContent?.articles ?? [],
-			page: newsContent.page,
-			latestNews: newsContent.latestNews,
-		} ?? {},
+	news: {
+		articles: newsContent?.articles ?? [],
+		page: newsContent.page,
+		latestNews: newsContent.latestNews,
+	},
 };
 export default content;
 type Content = typeof content;

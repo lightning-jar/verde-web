@@ -23,11 +23,11 @@ Here's some documentation for this component.
 	<!-- web components -->
 	{#each webComponents as wc}
 		<link
-			href="{wc.url}"
+			href={wc.url}
 			rel="modulepreload" />
 		<script
 			async
-			src="{wc.url}"
+			src={wc.url}
 			type="module"></script>
 	{/each}
 	{#if $page?.data?.meta?.title}
@@ -37,7 +37,7 @@ Here's some documentation for this component.
 	<!-- description -->
 	{#if $page?.data?.meta?.description}
 		<meta
-			content="{$page.data.meta.description}"
+			content={$page.data.meta.description}
 			name="description" />
 	{/if}
 

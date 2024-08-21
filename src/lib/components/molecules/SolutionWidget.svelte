@@ -4,6 +4,8 @@ Here's some documentation for this component.
 -->
 
 <script lang="ts">
+	/* global SolutionWidgetContent */
+
 	// components
 	import CTABlock from "$atoms/CTABlock.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";

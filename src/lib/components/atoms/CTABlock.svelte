@@ -6,13 +6,14 @@ Here's some documentation for this component.
 <script lang="ts">
 	// components
 	import BrandLeaf from "$atoms/BrandLeaf.svelte";
+	import type { HTMLAnchorAttributes } from "svelte/elements";
 
 	interface Props {
 		[key: string]: unknown;
 		text: string;
 		classes: string;
 		heading: string;
-		link: Link;
+		link: HTMLAnchorAttributes;
 		styles: string;
 	}
 	// props

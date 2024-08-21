@@ -4,7 +4,7 @@ console.log("fetching contact page content");
 const contactPageData = (await fetchContactPage(true)) as ContactPageContent;
 
 export function createContact() {
-	let data = $state(contactPageData);
+	const data = $state(contactPageData);
 
 	return {
 		get page() {

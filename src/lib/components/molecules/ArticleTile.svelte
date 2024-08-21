@@ -8,6 +8,7 @@ Here's some documentation for this component.
 	import PrimaryActionLink from "$atoms/PrimaryActionLink.svelte";
 	import WidgetSubheading from "$atoms/WidgetSubheading.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";
+	import type { HTMLAnchorAttributes } from "svelte/elements";
 
 	interface Props {
 		backgroundClasses: string;
@@ -16,7 +17,7 @@ Here's some documentation for this component.
 		excerpt: string;
 		headline: string;
 		image: Image;
-		link: Link;
+		link: HTMLAnchorAttributes;
 		linkClasses: string;
 		source: { name?: string | null; url?: string | null };
 		showSource: boolean;

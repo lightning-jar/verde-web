@@ -8,7 +8,7 @@ import { default as redirectsDataRaw } from "$data/redirects.yaml?raw";
 const redirectsData = YAML.parse(redirectsDataRaw) as string[][];
 
 export function createRedirects() {
-	let data = $state.frozen(redirectsData);
+	const data = redirectsData;
 
 	return {
 		get data() {

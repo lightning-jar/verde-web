@@ -4,63 +4,46 @@ This sweet little component is used to tell if it's parent component is on scree
 * prop tolerance: number (0-1) - how much of the parent element must be on screen to trigger the event
 * It doesn't add anything visible to the page
 * Component uses the intersectionObserver API (fast and lightweight)
+* parent component must bind to the isOnScreen prop to get the results of the test e.g bind:isOnScreen="{isOnScreen}"
 -->
 <script lang="ts">
-	// props
-	export let tolerance = 1; // 1 == 100% of the target element must be visible
-
-	// dispatch
-	import { createEventDispatcher } from "svelte";
-	const dispatch = createEventDispatcher();
-
-	// imports from svelte
+	// import onMount from Svelte
 	import { onMount } from "svelte";
+
+	// props
+	let { classes = "", tolerance = 1, isOnScreen = $bindable(false) } = $props();
 
 	// refs
 	let container: HTMLDivElement;
-	let parentElement: HTMLElement | null;
 
-	// variables
-	let parentIsOnScreen = false;
-	let parentWasOnScreen = false;
+	function watchForOnScreenStateChange(container: HTMLDivElement) {
+		// get the parent element
+		const parent = container.parentElement as HTMLElement | null;
+		if (!parent) return;
 
-	// observer options
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: tolerance,
-	};
-
-	// observer callback function
-	function callback(entries: IntersectionObserverEntry[]) {
-		// if there is a change in value, and it does not match current parentIsOnScreen value
-		// then update parentIsOnScreen and send results to parent
-		let result: boolean;
-		entries[0].isIntersecting ? (result = true) : (result = false);
-		1;
-		if (parentIsOnScreen != result) {
-			parentWasOnScreen = parentIsOnScreen;
-			parentIsOnScreen = result;
-			sendOnScreenTestResults();
+		// observer callback function
+		function handleIntersect(
+			entries: IntersectionObserverEntry[],
+			observer: IntersectionObserver,
+		) {
+			const status = entries[0].isIntersecting;
+			if (isOnScreen !== status) {
+				isOnScreen = status;
+			}
 		}
-	}
-	// function to sent test results to parent
-	function sendOnScreenTestResults() {
-		dispatch("isOnScreenTestResults", parentIsOnScreen);
+		// observer
+		const observer = new IntersectionObserver(handleIntersect, {
+			threshold: tolerance,
+		});
+
+		observer.observe(parent);
 	}
 
 	onMount(() => {
-		// identify parent element
-		parentElement =
-			container && container.parentElement ? container.parentElement : null;
-		// create observer
-		let observer = new IntersectionObserver(callback, options);
-		// observe parent
-		if (parentElement) observer.observe(parentElement);
+		if (container) watchForOnScreenStateChange(container);
 	});
 </script>
 
-<template lang="pug">
-	.pointer-events-none.h-0.w-0(
-		bind:this!="{ container }",
-		data-tool="onScreenTest")</template>
+<div
+	class="absolute pointer-events-none h-0 w-0 top-0 bottom-0 {classes}"
+	bind:this={container}></div>

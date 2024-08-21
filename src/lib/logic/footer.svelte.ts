@@ -33,11 +33,11 @@ export function createFooter() {
 		"news-stories-data",
 	];
 
-	let data = $state(footerDataRaw);
-	let mergedData = $derived({
+	const data = footerDataRaw;
+	const mergedData = {
 		...data,
 		"news-stories-data": newsContent.footerNews,
-	});
+	};
 
 	function buildAttributes(data: Data) {
 		return attributes.map((att) => buildAttribute(att, data)).join(", ");

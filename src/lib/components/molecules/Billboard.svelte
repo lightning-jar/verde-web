@@ -3,6 +3,8 @@
 Here's some documentation for this component.
 -->
 <script lang="ts">
+	/* global BillboardWidgetContent */
+
 	// components
 	import BillboardCard from "$atoms/BillboardCard.svelte";
 	import ParentIsOnScreen from "$tools/ParentIsOnScreen.svelte";
@@ -46,8 +48,8 @@ Here's some documentation for this component.
 
 		//- tool: child component who job is to report whether or not the parent is on screen
 		ParentIsOnScreen(
-			on:isOnScreenTestResults!="{ (e) => {isOnScreen = e.detail} }",
-			tolerance!="{ 0.25 }")
+			bind:isOnScreen,
+			tolerance=0.25)
 
 		//- video backgrounf
 		//- appears at md breakpoint and when on-screen

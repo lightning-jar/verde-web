@@ -4,9 +4,9 @@ console.log("fetching news page content");
 const newsPageData = (await fetchNewsPage(true)) as ArticlesPage;
 
 export function createNews() {
-	let header = $state(newsPageData.header);
-	let meta = $state(newsPageData.meta);
-	let articles = $state(newsPageData?.articles ?? []);
+	const header = newsPageData.header;
+	const meta = newsPageData.meta;
+	let articles = newsPageData?.articles ?? [];
 
 	return {
 		get articles() {

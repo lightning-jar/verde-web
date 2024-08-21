@@ -4,7 +4,7 @@ console.log("fetching home page content");
 const homePageData = (await fetchHomePage(true)) as HomePageContent;
 
 export function createHome() {
-	let data = $state(homePageData);
+	const data = homePageData;
 
 	return {
 		get page() {

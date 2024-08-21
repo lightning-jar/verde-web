@@ -1,4 +1,6 @@
 <script lang="ts">
+	/* global GlossaryPageContent */
+
 	//- stores
 	let { data }: { data: GlossaryPageContent } = $props();
 	let filter = $state("");

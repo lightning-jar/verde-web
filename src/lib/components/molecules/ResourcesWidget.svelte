@@ -4,6 +4,8 @@ Here's some documentation for this component.
 -->
 
 <script lang="ts">
+	/* global Article, ResourcesWidgetContent */
+
 	// components
 	import WidgetTitle from "$atoms/WidgetHeading.svelte";
 	import WidgetText from "$atoms/WidgetText.svelte";

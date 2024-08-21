@@ -4,6 +4,8 @@ Here's some documentation for this component.
 -->
 
 <script lang="ts">
+	/* global MessagingWidgetContent */
+
 	// svelte fade
 	import { fade } from "svelte/transition";
 

@@ -8,7 +8,7 @@ import { default as settingsDataRaw } from "$data/settings.yaml?raw";
 const settingsData = YAML.parse(settingsDataRaw) as Settings;
 
 export function createSettings() {
-	let data = $state.frozen(settingsData);
+	const data = settingsData;
 
 	return {
 		get data() {

@@ -4,6 +4,8 @@ Here's some documentation for this component.
 -->
 
 <script lang="ts">
+	/* global Article */
+
 	// components
 	import ArticleTile from "$molecules/ArticleTile.svelte";
 

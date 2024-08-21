@@ -20,10 +20,10 @@ import { default as iconsDataRaw } from "$data/icons.yaml?raw";
 const iconsData = YAML.parse(iconsDataRaw) as IconData;
 
 export function createIcons() {
-	let data = $state.frozen(iconsData);
-	let height = data.height;
-	let width = data.width;
-	let classes = data.classes;
+	const data = iconsData;
+	const height = data.height;
+	const width = data.width;
+	const classes = data.classes;
 
 	function buildIcon(iconName: string): string {
 		const icon = data.icons[iconName];

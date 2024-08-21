@@ -24,7 +24,7 @@ Here's some documentation for this component.
 
 <a
 	class="block border border-neutral-100 border-opacity-40 px-2 py-2 rounded-md text-13 {classes}"
-	href="{url}"
-	rel="{rel ? rel : null}"
-	target="{target ? target : null}"
-	title="{title ? title : null}">{label}</a>
+	href={url}
+	rel={rel ? rel : null}
+	target={target ? target : null}
+	title={title ? title : null}>{label}</a>

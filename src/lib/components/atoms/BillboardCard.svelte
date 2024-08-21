@@ -4,6 +4,7 @@ Here's some documentation for this component.
 -->
 
 <script lang="ts">
+	/* global Card */
 	interface Props {
 		card: Card;
 	}

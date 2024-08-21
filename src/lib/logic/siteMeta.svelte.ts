@@ -1,10 +1,10 @@
 import { dev, version } from "$app/environment";
 
 export function createSiteMeta() {
-	let data = $state.frozen({
+	const data = {
 		dev,
 		version,
-	});
+	};
 
 	return {
 		get data() {

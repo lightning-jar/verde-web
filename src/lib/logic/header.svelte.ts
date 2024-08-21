@@ -44,9 +44,9 @@ export function createHeader() {
 		return attributes.map((att) => buildAttribute(att, data)).join(", ");
 	}
 
-	let data = $state(headerData);
+	const data = headerData;
 
-	let component = $derived(`<${name} ${buildAttributes(data)}></${name}>`);
+	const component = `<${name} ${buildAttributes(data)}></${name}>`;
 
 	return {
 		get attributes() {

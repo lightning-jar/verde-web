@@ -2,11 +2,13 @@ import { fetchGlossaryPage } from "$lib/fetch/fetchGlossaryPage.svelte";
 import sluggo from "$utils/sluggo";
 
 console.log("fetching glossary data");
-const glossaryPageData = (await fetchGlossaryPage(true)) as GlossaryPageContent;
+const glossaryPageData = $state(
+	await fetchGlossaryPage(true),
+) as GlossaryPageContent;
 
 export function createGlossary() {
-	let rawData = $state(glossaryPageData as GlossaryPageContent);
-	let data = $derived.by(() => {
+	const rawData = $derived(glossaryPageData as GlossaryPageContent);
+	const data = $derived.by(() => {
 		const { header, meta, glossaryEntries } = rawData;
 		// generate id for each glossary entry
 		const updatedEntries =

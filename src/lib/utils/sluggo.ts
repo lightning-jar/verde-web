@@ -636,7 +636,7 @@ export const sluggo = function (
 	if (!options) {
 		options = {};
 	}
-	let separator = options.separator ?? "-";
+	const separator = options.separator ?? "-";
 	let i, j;
 	// Track whether last character was also bad to
 	// prevent duplicate dashes.
@@ -645,7 +645,7 @@ export const sluggo = function (
 	let lastBad = true;
 	let startOfMostRecentRun;
 	for (i = 0; i < s.length; i++) {
-		let code = s.charCodeAt(i);
+		const code = s.charCodeAt(i);
 		bad = false;
 		if (options.allow !== undefined && options.allow.includes(s.charAt(i))) {
 			// Make an exception
@@ -653,7 +653,6 @@ export const sluggo = function (
 			// efficient binary search for a disallow character code
 			let low = 0;
 			let high = _sluggoRanges.length - 1;
-			// eslint-disable-next-line no-constant-condition
 			while (true) {
 				j = (low + high) >> 1;
 				if (code >= _sluggoRanges[j][0] && code <= _sluggoRanges[j][1]) {
