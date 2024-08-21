@@ -14,7 +14,7 @@ const headerData = YAML.parse(headerDataRaw);
 export function createHeader() {
 	// constants
 	const name = "site-header";
-	const url = `https://cdn.lj.dev/e/wc/${name}@0.1.1.min.js`;
+	const url = `https://cdn.lj.dev/e/wc/${name}@0.1.2.min.js`;
 	const attributes = [
 		"border-bottom-color",
 		"border-bottom-size",
