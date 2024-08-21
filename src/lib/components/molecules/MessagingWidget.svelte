@@ -52,8 +52,8 @@ Here's some documentation for this component.
 				inset-0
 				lg:block`)
 			ParentIsOnScreen(
-				on:isOnScreenTestResults!="{ (e) => {isOnScreen = e.detail} }",
-				tolerance!="{ 0.35 }")
+				bind:isOnScreen,
+				tolerance=0.35)
 
 		//- background video
 		+if('messaging.background?.video?.url && isOnScreen')
