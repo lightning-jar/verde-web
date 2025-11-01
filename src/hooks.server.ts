@@ -5,7 +5,7 @@ export const config = {
 };
 
 // import Sentry
-import * as Sentry from "@sentry/sveltekit";
+// import * as Sentry from "@sentry/sveltekit";
 
 // svelte functions
 import { sequence } from "@sveltejs/kit/hooks";
@@ -20,14 +20,14 @@ import settings from "$collections/settings";
 import siteMeta from "$collections/siteMeta";
 import utils from "$collections/utils";
 
-Sentry.init({
-	dsn: "https://1b34710a44c60e438486a0a0c0db3209@o4505247956860928.ingest.us.sentry.io/4507181233274880",
-	tracesSampleRate: 1,
-});
+// Sentry.init({
+// 	dsn: "https://1b34710a44c60e438486a0a0c0db3209@o4505247956860928.ingest.us.sentry.io/4507181233274880",
+// 	tracesSampleRate: 1,
+// });
 
 export const handle: Handle = sequence(
 	// sentry
-	Sentry.sentryHandle(),
+	// Sentry.sentryHandle(),
 
 	// locals
 	async ({ event, resolve }) => {
@@ -46,4 +46,4 @@ export const handle: Handle = sequence(
 );
 
 // handle error
-export const handleError = Sentry.handleErrorWithSentry();
+// export const handleError = Sentry.handleErrorWithSentry();
